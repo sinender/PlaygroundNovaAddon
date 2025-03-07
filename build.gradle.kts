@@ -1,4 +1,6 @@
-group = "com.example" // TODO: Change this to your group
+import xyz.xenondevs.novagradle.task.PluginDependency
+
+group = "com.al3x" // TODO: Change this to your group
 version = "1.0-SNAPSHOT" // TODO: Change this to your addon version
 
 plugins {
@@ -9,6 +11,7 @@ plugins {
 
 repositories {
     mavenCentral()
+    mavenLocal()
     maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://repo.xenondevs.xyz/releases")
 }
@@ -16,12 +19,15 @@ repositories {
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
     implementation(libs.nova)
+    implementation("com.al3x:paper:1.0")
 }
 
 addon {
     name = project.name.replaceFirstChar(Char::uppercase)
     version = project.version.toString()
     main = "com.example.ExampleAddon" // TODO: Change this to your main class
+    pluginMain.set("com.example.ExamplePlugin")
+    dependencies.add(PluginDependency("Housing2", PluginDependency.Stage.SERVER, PluginDependency.Load.BEFORE, true, true))
     
     // output directory for the generated addon jar is read from the "outDir" project property (-PoutDir="...")
     val outDir = project.findProperty("outDir")
