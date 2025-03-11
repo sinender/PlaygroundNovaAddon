@@ -137,10 +137,10 @@ class ConditionalWindow : AlternativeActionsWindow("Conditional Action") {
     }
 
     override fun createWindow(): Window.Builder.Normal.Split {
-
-        return Window.split()
+        window = Window.split()
             .setUpperGui(createUpperGui())
             .setLowerGui(createLowerGui())
             .setTitle(GuiTextures.CONDITIONALS.component)
+        return window!!
     }
 }

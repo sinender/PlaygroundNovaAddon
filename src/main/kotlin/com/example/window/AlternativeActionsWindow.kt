@@ -11,6 +11,7 @@ import java.util.LinkedHashMap
 abstract class AlternativeActionsWindow(
     val name: String,
 ) {
+    var window: Window.Builder.Normal.Split? = null
     var action: Action? = null
     val ingredients: HashMap<Gui.Builder<*, *>, ArrayList<Ingredient>> = HashMap()
     val structures: HashMap<Gui.Builder<*, *>, ArrayList<String>> = HashMap()

@@ -27,8 +27,20 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val IMPORT_FROM_CLIPBOARD = emptyItem("import", "§bImport from Clipboard")
     val SET_COMMENT = emptyItem("comment", "§dSet Comment")
 
+    //Action GUI Items
+    val ADD_ACTION = guiItem("action/add_action", "§aAdd Action")
+    val EXPORT_ACTION = guiItem("action/export", "§aExport Actions")
+    val IMPORT_ACTION = guiItem("action/import", "§bImport Actions")
+    val IMPORT_AUTO = guiItem("action/import_auto", "§bImport Actions from Websocket")
+    val NO_ACTION = guiItem("action/no_action", "§cNo Actions!", false, 3)
+    val NO_ACTION_EMPTY = emptyItem("no_action", "§cNo Actions!")
+    val RESTORE = guiItem("action/restore", "§aRestore")
 
+    //General GUI Items
+    val PREVIOUS_PAGE = guiItem("left_arrow", "§aPrevious Page")
+    val NEXT_PAGE = guiItem("right_arrow", "§aNext Page")
     val BACK = emptyItem("back", "§cGo Back")
+    val SEARCH = emptyItem("search", "§eSearch")
 
     private fun emptyItem(
         name: String,
