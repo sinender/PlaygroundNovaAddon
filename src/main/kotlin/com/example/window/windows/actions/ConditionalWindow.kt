@@ -1,17 +1,12 @@
-package com.example.window.actions
+package com.example.window.windows.actions
 
 import com.al3x.housing2.Action.Actions.ConditionalAction
 import com.example.guitextures.GuiItems
 import com.example.guitextures.GuiTextures
 import com.example.window.AlternativeActionsWindow
-import net.kyori.adventure.text.Component
-import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder
-import org.bukkit.entity.Player
 import xyz.xenondevs.invui.gui.Gui
 import xyz.xenondevs.invui.window.Window
-import xyz.xenondevs.invui.window.AbstractSplitWindow
 import java.util.LinkedHashMap
-import java.util.function.Function
 
 class ConditionalWindow : AlternativeActionsWindow("Conditional Action") {
     override fun createLowerGui(): Gui.Builder<*, *> {

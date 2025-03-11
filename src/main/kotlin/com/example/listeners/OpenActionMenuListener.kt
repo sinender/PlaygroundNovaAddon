@@ -1,26 +1,16 @@
 package com.example.listeners
 
-import com.al3x.housing2.Action.Actions.ConditionalAction
 import com.al3x.housing2.Events.MenuClickEvent
 import com.al3x.housing2.Events.MenuSetupItemsEvent
 import com.al3x.housing2.Events.OpenActionMenuEvent
-import com.al3x.housing2.Instances.HousingWorld
-import com.al3x.housing2.Instances.MenuManager
 import com.al3x.housing2.Menus.Actions.ActionEditMenu
-import com.al3x.housing2.Menus.Menu
-import com.example.ExamplePlugin
 import com.example.ExamplePlugin.Companion.actionsWindow
-import com.example.ExamplePlugin.Companion.windows
 import com.example.window.AlternativeActionsWindow
-import com.example.window.actions.ConditionalWindow
-import net.kyori.adventure.text.Component
-import org.bukkit.Bukkit
-import org.bukkit.craftbukkit.inventory.CraftInventoryView
+import com.example.window.windows.actions.ConditionalWindow
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.inventory.InventoryClickEvent
-import xyz.xenondevs.invui.window.AbstractSplitWindow
 
 class OpenActionMenuListener : Listener {
     @EventHandler

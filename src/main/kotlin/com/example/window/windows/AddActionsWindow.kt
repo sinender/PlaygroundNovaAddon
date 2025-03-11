@@ -1,10 +1,8 @@
-package com.example.window
+package com.example.window.windows
 
-import com.al3x.housing2.Menus.Actions.ActionsMenu
 import com.example.guitextures.GuiItems
 import com.example.guitextures.GuiTextures
-import net.kyori.adventure.text.Component
-import org.bukkit.Material
+import com.example.window.AlternativeWindow
 import xyz.xenondevs.invui.gui.Gui
 import xyz.xenondevs.invui.item.Item
 import xyz.xenondevs.invui.window.Window
