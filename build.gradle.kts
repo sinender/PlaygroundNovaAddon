@@ -14,12 +14,13 @@ repositories {
     mavenLocal()
     maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://repo.xenondevs.xyz/releases")
+    maven("https://repo.redstone.llc/releases")
 }
 
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
     implementation(libs.nova)
-    implementation("com.al3x:paper:1.0")
+    implementation("com.al3x:Playground:1.0")
 }
 
 addon {
