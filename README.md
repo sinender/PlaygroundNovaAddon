@@ -1,8 +1,17 @@
 # PlaygroundNovaAddon
-Playground's Nova addon, that allows for custom textured guis to be made ontop of playground guis. 
 
-# Building addon
-./gradlew addonJar -PoutDir="\<output dir>"
+PlaygroundNovaAddon is an extension for Playground that enables the creation of custom textured GUIs on top of existing Playground GUIs.
 
-# Contribute
-Visit [Nova's Documentation](https://xenondevs.xyz/docs/nova/addon/) for a guide on how to create/edit Nova addons
+## Features
+- Create custom textured GUIs
+- Seamless integration with Playground GUIs
+
+## Building the Addon
+To build the addon, use the following command:
+```sh
+./gradlew addonJar -PoutDir="<output dir>"
+```
+Replace `<output dir>` with your desired output directory. You must use the jar found in this folder or else it wont work.
+
+## Contributing
+We welcome contributions! To get started, visit [Nova's Documentation](https://xenondevs.xyz/docs/nova/addon/) for a guide on how to create and edit Nova addons.
