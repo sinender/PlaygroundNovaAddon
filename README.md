@@ -4,5 +4,5 @@ Playground's Nova addon, that allows for custom textured guis to be made ontop o
 # Building addon
 ./gradlew addonJar -PoutDir="\<output dir>"
 
-# Create your own Nova addon
-Visit [our documentation](https://xenondevs.xyz/docs/nova/addon/) for a guide on how to create/edit Nova addons
+# Contribute
+Visit [Nova's Documentation](https://xenondevs.xyz/docs/nova/addon/) for a guide on how to create/edit Nova addons
