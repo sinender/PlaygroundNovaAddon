@@ -25,7 +25,7 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         path("gui/add_actions_window")
     }
 
-    val TEMPLATE = guiTexture("template") {
+    val TEMPLATE = guiTexture("template_window") {
         alignment(-25,-21)
         path("gui/template")
     }
