@@ -36,6 +36,11 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NO_ACTION_EMPTY = emptyItem("no_action", "§cNo Actions!")
     val RESTORE = guiItem("action/restore", "§aRestore")
 
+    //Systems > Functions GUI Items
+    val ADD_FUNCTION = guiItem("functions/add_function", "§aAdd Function")
+    val NO_ITEMS = guiItem("functions/no_items", "§aNo Items!", false, 3)
+    val NO_ITEMS_EMPTY = emptyItem("no_items", "§aNo Items!")
+
     //General GUI Items
     val PREVIOUS_PAGE = guiItem("left_arrow", "§aPrevious Page")
     val NEXT_PAGE = guiItem("right_arrow", "§aNext Page")
