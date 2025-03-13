@@ -8,6 +8,7 @@ import com.example.window.*
 import com.example.window.windows.ActionsWindow
 import com.example.window.windows.AddActionsWindow
 import com.example.window.windows.FunctionsWindow
+import com.example.window.windows.PlaygroundWindow
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
@@ -21,6 +22,7 @@ class OpenMenuListener : Listener {
             "ActionsMenu" -> ActionsWindow()
             "AddActionMenu" -> AddActionsWindow()
             "FunctionsMenu" -> FunctionsWindow()
+            "HousingMenu" -> PlaygroundWindow()
             else -> return
         }
 

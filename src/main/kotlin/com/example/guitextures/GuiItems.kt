@@ -41,6 +41,22 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NO_ITEMS = guiItem("functions/no_items", "§aNo Items!", false, 3)
     val NO_ITEMS_EMPTY = emptyItem("no_items", "§aNo Items!")
 
+    //Playground Menu GUI Items
+    val PLAYER_LISTING = emptyItem("player_listing", "§ePlayer Listing")
+    val BUILD_MODE = emptyItem("build_mode", "§aMode: §eBuild Mode")
+    val BROWSER = emptyItem("browser", "§bTravel to someone else's house")
+    val HEADS = emptyItem("heads", "§aHeads")
+    val SETTINGS = emptyItem("settings", "§7Settings")
+    val GROUPS = emptyItem("groups", "§dGroups")
+    val PROTOOLS = emptyItem("protools", "§5Protools")
+    val CUSTOM_ITEMS = emptyItem("custom_items", "§cCustom Items")
+    val ITEMS = emptyItem("items", "§bItems")
+    val SYSTEMS = emptyItem("systems", "§eSystems")
+    val VISIBILITY_PUBLIC = guiItem("playground.menu/visibility_public", "§aVisiting Rules", false, 3)
+    val VISIBILITY_PUBLIC_EMPTY = emptyItem("visibility_public", "§aVisiting Rules")
+    val VISIBILITY_PRIVATE = guiItem("playground.menu/visibility_private", "§aVisiting Rules", false, 3)
+    val VISIBILITY_PRIVATE_EMPTY = emptyItem("visibility_private", "§aVisiting Rules")
+
     //General GUI Items
     val PREVIOUS_PAGE = guiItem("left_arrow", "§aPrevious Page")
     val NEXT_PAGE = guiItem("right_arrow", "§aNext Page")

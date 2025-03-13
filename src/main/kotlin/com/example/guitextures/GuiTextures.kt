@@ -28,6 +28,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/functions_window")
     }
+    val PLAYGROUND_WINDOW = guiTexture("playground_window") {
+        alignment(-25,-21)
+        path("gui/playground_window")
+    }
 
 
     val TEMPLATE = guiTexture("template") {
