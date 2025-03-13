@@ -72,8 +72,8 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
                 translation = Vector3d(8.0, 0.0, 0.0)
             )
             3 -> Model.Display(
-                scale = Vector3d(3.0, 1.0, 1.0),
-                translation = Vector3d(16.0, 0.0, 0.0)
+                scale = Vector3d(3.3, 1.0, 1.0),
+                translation = Vector3d(18.0, 2.0, 0.0)
             )
             else -> Model.Display(
                 scale = Vector3d(1.0, 1.0, 1.0),
