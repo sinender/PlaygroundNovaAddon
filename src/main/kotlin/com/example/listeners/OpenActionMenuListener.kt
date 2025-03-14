@@ -6,6 +6,7 @@ import com.al3x.housing2.Events.OpenActionMenuEvent
 import com.al3x.housing2.Menus.Actions.ActionEditMenu
 import com.example.ExamplePlugin.Companion.actionsWindow
 import com.example.window.AlternativeActionsWindow
+import com.example.window.windows.ChatActionSettingsWindow
 import com.example.window.windows.actions.ConditionalWindow
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler

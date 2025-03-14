@@ -36,6 +36,10 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NO_ACTION_EMPTY = emptyItem("no_action", "§cNo Actions!")
     val RESTORE = guiItem("action/restore", "§aRestore")
 
+    //Action Edit GUI Items
+    val ADD_EXPRESSION = guiItem("action.settings/add_expression", "§aAdd Expression", false, 3)
+    val ADD_EXPRESSION_EMPTY = emptyItem("add_expression", "§aAdd Expression")
+
     //Systems > Functions GUI Items
     val ADD_FUNCTION = guiItem("functions/add_function", "§aAdd Function")
     val NO_ITEMS = guiItem("functions/no_items", "§aNo Items!", false, 3)

@@ -18,6 +18,7 @@ class OpenMenuListener : Listener {
         val window: AlternativeWindow = when (event.menu.javaClass.simpleName) {
             "ActionsMenu" -> ActionsWindow()
             "AddActionMenu" -> AddActionsWindow()
+            "AddConditionMenu" -> AddActionsWindow()
             "FunctionsMenu" -> FunctionsWindow()
             "HousingMenu" -> PlaygroundWindow()
             "RegionsMenu" -> RegionsWindow()
@@ -29,6 +30,7 @@ class OpenMenuListener : Listener {
             "CustomMenusMenu" -> CustomMenusWindow()
             "NPCsMenu" -> NPCsWindow()
             "SystemsMenu" -> SystemsWindow()
+            "ActionEditMenu" -> ChatActionSettingsWindow()
             else -> return
         }
 

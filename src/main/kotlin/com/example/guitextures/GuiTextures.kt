@@ -13,6 +13,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
          alignment(-25,-21)
          path("gui/actions/conditionals")
     }
+    val CHAT_ACTION_SETTINGS = guiTexture("actions/chat_action_settings") {
+        alignment(-25,-21)
+        path("gui/actions/chat_action_settings")
+    }
 
     //Generic
     val ACTIONS_WINDOW = guiTexture("actions_window") {
