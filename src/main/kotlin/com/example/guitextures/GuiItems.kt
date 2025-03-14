@@ -55,13 +55,13 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val CREATE_LAYOUT = guiItem("layouts/create_layout", "§aCreate Layout")
 
     //Systems > Teams GUI Items
-    val CREATE_TEAM = guiItem("functions/add_function", "§aCreate Team")
+    val CREATE_TEAM = guiItem("teams/create_team", "§aCreate Team")
 
     //Systems > Custom Menus GUI Items
-    val CREATE_MENU = guiItem("functions/add_function", "§aCreate Menu")
+    val CREATE_MENU = guiItem("custommenus/create_menu", "§aCreate Menu")
 
     //Systems > NPCs GUI Items
-    val CREATE_NPC = guiItem("functions/add_function", "§aCreate NPC")
+    val CREATE_NPC = guiItem("npcs/create_npc", "§aCreate NPC")
 
     //Playground Menu GUI Items
     val PLAYER_LISTING = emptyItem("player_listing", "§ePlayer Listing")
