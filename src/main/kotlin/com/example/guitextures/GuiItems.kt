@@ -44,6 +44,10 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     //Systems > Regions GUI Items
     val CREATE_REGION = guiItem("regions/create_region", "§aCreate Region")
 
+    //Systems > Scoreboard GUI Items
+    val TITLE = emptyItem("title", "§bTitle")
+    val NEW_LINE = emptyItem("add_line", "§aAdd Line")
+
     //Playground Menu GUI Items
     val PLAYER_LISTING = emptyItem("player_listing", "§ePlayer Listing")
     val BUILD_MODE = emptyItem("build_mode", "§aMode: §eBuild Mode")
