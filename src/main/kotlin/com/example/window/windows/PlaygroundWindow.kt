@@ -37,9 +37,9 @@ class PlaygroundWindow : AlternativeWindow() {
                 's', GuiItems.SYSTEMS.createItemBuilder()
                     .addLoreLines(menu?.getItem(22)?.lore() ?: emptyList()), 22
             )
-            .addIngredient('g', GuiItems.GROUPS.createItemBuilder(), 13)
+            .addIngredient('g', GuiItems.GROUPS.createItemBuilder(), 31)
             .addIngredient('e', GuiItems.SETTINGS.createItemBuilder(), 21)
-            .addIngredient('p', GuiItems.PROTOOLS.createItemBuilder(), 33)
+            .addIngredient('p', GuiItems.PROTOOLS.createItemBuilder(), 13)
 
 
         return upperGui!!
@@ -56,7 +56,7 @@ class PlaygroundWindow : AlternativeWindow() {
                 )
             )
             .addIngredient('t', GuiItems.BROWSER.createItemBuilder(), 36)
-            .addIngredient('b', GuiItems.BUILD_MODE.createItemBuilder(), 45)
+            .addIngredient('b', GuiItems.BUILD_MODE.createItemBuilder(), 44)
             .addIngredient('l', GuiItems.PLAYER_LISTING.createItemBuilder(), 8)
         menu?.getItem(0)?.lore?.let { lore ->
             if (lore.any { stripColor(it) == "Current Privacy: PUBLIC" }) {
