@@ -28,6 +28,7 @@ class OpenMenuListener : Listener {
             "TeamsMenu" -> TeamsWindow()
             "CustomMenusMenu" -> CustomMenusWindow()
             "NPCsMenu" -> NPCsWindow()
+            "SystemsMenu" -> SystemsWindow()
             else -> return
         }
 

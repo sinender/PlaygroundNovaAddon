@@ -61,6 +61,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25, -21)
         path("gui/npcs_window")
     }
+    val SYSTEMS_WINDOW = guiTexture("systems_window") {
+        alignment(-25, -21)
+        path("gui/systems_window")
+    }
     val PLAYGROUND_WINDOW = guiTexture("playground_window") {
         alignment(-25,-21)
         path("gui/playground_window")
