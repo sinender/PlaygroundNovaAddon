@@ -27,32 +27,19 @@ class ChatActionSettingsWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    "c c c c c c c c c",
-                    "h h h h h h h h h",
-                    "d d d s f f d d d",
+                    ". . . . . . . . .",
+                    ". . . . . . . . .",
+                    ". . . s f f . . .",
                 )
             )
         if (menu?.getItem(10)?.itemMeta?.displayName == "§eStat") {
             upperGui!!.addIngredient('s', GuiItems.ADD_EXPRESSION.createItemBuilder(), 50)
             upperGui!!.addIngredient('f', GuiItems.ADD_EXPRESSION_EMPTY.createItemBuilder(), 50)
-            upperGui!!.addIngredient('d', empty_slot)
         } else {
-            upperGui!!.addIngredient('s', empty_slot)
-            upperGui!!.addIngredient('f', empty_slot)
-            upperGui!!.addIngredient('d', empty_slot)
-        }
-        if (menu?.getItem(40)?.itemMeta?.displayName == "§cGo Back") {
-            upperGui!!.addIngredient('h', empty_slot)
-            upperGui!!.addIngredient('d', empty_slot)
             upperGui!!.addIngredient('s', empty_slot)
             upperGui!!.addIngredient('f', empty_slot)
         }
         if (menu?.getItem(31)?.itemMeta?.displayName == "§cGo Back") {
-            upperGui!!.addIngredient('h', empty_slot)
-            upperGui!!.addIngredient('c', empty_slot)
-            upperGui!!.addIngredient('d', empty_slot)
-            upperGui!!.addIngredient('s', empty_slot)
-            upperGui!!.addIngredient('f', empty_slot)
             val allowedSlots =
                 intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25)
             upperGui!!.addModifier {
