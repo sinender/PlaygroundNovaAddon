@@ -41,6 +41,9 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NO_ITEMS = guiItem("functions/no_items", "§aNo Items!", false, 3)
     val NO_ITEMS_EMPTY = emptyItem("no_items", "§aNo Items!")
 
+    //Systems > Regions GUI Items
+    val CREATE_REGION = guiItem("regions/create_region", "§aCreate Region")
+
     //Playground Menu GUI Items
     val PLAYER_LISTING = emptyItem("player_listing", "§ePlayer Listing")
     val BUILD_MODE = emptyItem("build_mode", "§aMode: §eBuild Mode")

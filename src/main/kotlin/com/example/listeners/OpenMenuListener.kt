@@ -5,10 +5,7 @@ import com.al3x.housing2.Events.MenuSetupItemsEvent
 import com.al3x.housing2.Events.OpenMenuEvent
 import com.example.ExamplePlugin.Companion.windows
 import com.example.window.*
-import com.example.window.windows.ActionsWindow
-import com.example.window.windows.AddActionsWindow
-import com.example.window.windows.FunctionsWindow
-import com.example.window.windows.PlaygroundWindow
+import com.example.window.windows.*
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
@@ -23,6 +20,7 @@ class OpenMenuListener : Listener {
             "AddActionMenu" -> AddActionsWindow()
             "FunctionsMenu" -> FunctionsWindow()
             "HousingMenu" -> PlaygroundWindow()
+            "RegionsMenu" -> RegionsWindow()
             else -> return
         }
 
