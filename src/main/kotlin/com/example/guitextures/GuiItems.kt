@@ -54,6 +54,15 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     //Systems > Inventory Layouts GUI Items
     val CREATE_LAYOUT = guiItem("layouts/create_layout", "§aCreate Layout")
 
+    //Systems > Teams GUI Items
+    val CREATE_TEAM = guiItem("functions/add_function", "§aCreate Team")
+
+    //Systems > Custom Menus GUI Items
+    val CREATE_MENU = guiItem("functions/add_function", "§aCreate Menu")
+
+    //Systems > NPCs GUI Items
+    val CREATE_NPC = guiItem("functions/add_function", "§aCreate NPC")
+
     //Playground Menu GUI Items
     val PLAYER_LISTING = emptyItem("player_listing", "§ePlayer Listing")
     val BUILD_MODE = emptyItem("build_mode", "§aMode: §eBuild Mode")

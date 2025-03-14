@@ -25,6 +25,9 @@ class OpenMenuListener : Listener {
             "ScoreboardMenu" -> ScoreboardWindow()
             "CommandsMenu" -> CommandsWindow()
             "LayoutsMenu" -> LayoutsWindow()
+            "TeamsMenu" -> TeamsWindow()
+            "CustomMenusMenu" -> CustomMenusWindow()
+            "NPCsMenu" -> NPCsWindow()
             else -> return
         }
 

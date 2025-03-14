@@ -24,6 +24,7 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/add_actions_window")
     }
+    //Systems
     val FUNCTIONS_WINDOW = guiTexture("functions_window") {
         alignment(-25,-21)
         path("gui/functions_window")
@@ -47,6 +48,18 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
     val LAYOUTS_WINDOW = guiTexture("layouts_window") {
         alignment(-25, -21)
         path("gui/layouts_window")
+    }
+    val TEAMS_WINDOW = guiTexture("teams_window") {
+        alignment(-25, -21)
+        path("gui/teams_window")
+    }
+    val CUSTOM_MENUS_WINDOW = guiTexture("custom_menus_window") {
+        alignment(-25, -21)
+        path("gui/custom_menus_window")
+    }
+    val NPCS_WINDOW = guiTexture("npcs_window") {
+        alignment(-25, -21)
+        path("gui/npcs_window")
     }
     val PLAYGROUND_WINDOW = guiTexture("playground_window") {
         alignment(-25,-21)
