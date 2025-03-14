@@ -21,7 +21,7 @@ class OpenMenuListener : Listener {
             "FunctionsMenu" -> FunctionsWindow()
             "HousingMenu" -> PlaygroundWindow()
             "RegionsMenu" -> RegionsWindow()
-            "EventActionsMenu" -> RegionsWindow()
+            "EventActionsMenu" -> ScoreboardWindow()
             else -> return
         }
 
