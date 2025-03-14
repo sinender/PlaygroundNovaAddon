@@ -11,7 +11,7 @@ import xyz.xenondevs.nova.world.item.DefaultGuiItems
 class CustomMenusWindow : AlternativeWindow() {
     override fun createWindow(): Window.Builder.Normal.Split {
         window = Window.split()
-            .setTitle(GuiTextures.NPCS_WINDOW.component)
+            .setTitle(GuiTextures.CUSTOM_MENUS_WINDOW.component)
             .setUpperGui(createUpperGui())
             .setLowerGui(createLowerGui())
 
@@ -48,7 +48,7 @@ class CustomMenusWindow : AlternativeWindow() {
                         .addLoreLines(menu?.getItem(53)?.lore() ?: emptyList())
                 }, 53
             )
-            .addIngredient('a', GuiItems.CREATE_NPC.createItemBuilder(), 50)
+            .addIngredient('a', GuiItems.CREATE_MENU.createItemBuilder(), 50)
             .addIngredient(
                 's', GuiItems.SEARCH.createItemBuilder()
                     .addLoreLines(menu?.getItem(51)?.lore() ?: emptyList()), 51
