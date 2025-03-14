@@ -39,18 +39,16 @@ class ScoreboardWindow : AlternativeWindow() {
                 'n', GuiItems.NEW_LINE.createItemBuilder()
                     .addLoreLines(menu?.getItem(41)?.lore() ?: emptyList()), 41
             )
-        if (menu?.getItem(22)?.isEmpty == true) {
-            val allowedSlots =
-                intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25)
-            upperGui!!.addModifier {
-                for (slot in allowedSlots) {
-                    if (menu?.getItem(slot)?.isEmpty == false) {
-                        it.setItem(
-                            slot, Item.simple(
-                                menu?.getItem(slot) ?: DefaultGuiItems.INVISIBLE_ITEM.createItemStack(1)
-                            )
+        val allowedSlots =
+            intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25)
+        upperGui!!.addModifier {
+            for (slot in allowedSlots) {
+                if (menu?.getItem(slot)?.isEmpty == false) {
+                    it.setItem(
+                        slot, Item.simple(
+                            menu?.getItem(slot) ?: DefaultGuiItems.INVISIBLE_ITEM.createItemStack(1)
                         )
-                    }
+                    )
                 }
             }
         }
