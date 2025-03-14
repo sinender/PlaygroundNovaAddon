@@ -23,6 +23,8 @@ class OpenMenuListener : Listener {
             "RegionsMenu" -> RegionsWindow()
             "EventActionsMenu" -> EventActionsWindow()
             "ScoreboardMenu" -> ScoreboardWindow()
+            "CommandsMenu" -> CommandsWindow()
+            "LayoutsMenu" -> LayoutsWindow()
             else -> return
         }
 

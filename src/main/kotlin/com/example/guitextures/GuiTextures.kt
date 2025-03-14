@@ -40,6 +40,14 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25, -21)
         path("gui/scoreboard_window")
     }
+    val COMMANDS_WINDOW = guiTexture("commands_window") {
+        alignment(-25, -21)
+        path("gui/commands_window")
+    }
+    val LAYOUTS_WINDOW = guiTexture("layouts_window") {
+        alignment(-25, -21)
+        path("gui/layouts_window")
+    }
     val PLAYGROUND_WINDOW = guiTexture("playground_window") {
         alignment(-25,-21)
         path("gui/playground_window")

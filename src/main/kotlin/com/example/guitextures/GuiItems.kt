@@ -48,6 +48,12 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val TITLE = emptyItem("title", "§bTitle")
     val NEW_LINE = emptyItem("add_line", "§aAdd Line")
 
+    //Systems > Commands GUI Items
+    val CREATE_COMMAND = guiItem("commands/create_command", "§aCreate Command")
+
+    //Systems > Inventory Layouts GUI Items
+    val CREATE_LAYOUT = guiItem("layouts/create_layout", "§aCreate Layout")
+
     //Playground Menu GUI Items
     val PLAYER_LISTING = emptyItem("player_listing", "§ePlayer Listing")
     val BUILD_MODE = emptyItem("build_mode", "§aMode: §eBuild Mode")
