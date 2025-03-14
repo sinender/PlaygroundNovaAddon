@@ -52,7 +52,21 @@ class EventActionsWindow : AlternativeWindow() {
                 's', GuiItems.SEARCH.createItemBuilder()
                     .addLoreLines(menu?.getItem(51)?.lore() ?: emptyList()), 51
             )
-
+        if (menu?.getItem(22)?.isEmpty == true) {
+            val allowedSlots =
+                intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34)
+            upperGui!!.addModifier {
+                for (slot in allowedSlots) {
+                    if (menu?.getItem(slot)?.isEmpty == false) {
+                        it.setItem(
+                            slot, Item.simple(
+                                menu?.getItem(slot) ?: DefaultGuiItems.INVISIBLE_ITEM.createItemStack(1)
+                            )
+                        )
+                    }
+                }
+            }
+        }
         return upperGui!!
     }
 
