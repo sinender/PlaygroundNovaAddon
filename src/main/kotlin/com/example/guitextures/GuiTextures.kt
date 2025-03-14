@@ -32,6 +32,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/regions_window")
     }
+    val EVENTACTIONS_WINDOW = guiTexture("eventactions_window") {
+        alignment(-25,-21)
+        path("gui/eventactions_window")
+    }
     val PLAYGROUND_WINDOW = guiTexture("playground_window") {
         alignment(-25,-21)
         path("gui/playground_window")
