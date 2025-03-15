@@ -23,13 +23,14 @@ class PlaygroundWindow : AlternativeWindow() {
         upperGui = Gui.normal()
             .setStructure(
                 arrayListOf(
-                    ". . . . . . . . .",
+                    "j . . . . . . . j",
                     ". . . h i c . . .",
                     ". . . s s s . . .",
                     ". . . g e p . . .",
-                    ". . . . . . . . ."
+                    "j . . . . . . . j"
                 )
             )
+            .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 1) //Makes the slot not clickable.
             .addIngredient('h', GuiItems.HEADS.createItemBuilder(), 20)
             .addIngredient('i', GuiItems.ITEMS.createItemBuilder(), 23)
             .addIngredient('c', GuiItems.CUSTOM_ITEMS.createItemBuilder(), 24)

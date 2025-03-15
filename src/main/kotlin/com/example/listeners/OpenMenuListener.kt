@@ -31,6 +31,7 @@ class OpenMenuListener : Listener {
             "NPCsMenu" -> NPCsWindow()
             "SystemsMenu" -> SystemsWindow()
             "ActionEditMenu" -> ChatActionSettingsWindow()
+            "ActionEnumMenu" -> OptionsWindow()
             else -> return
         }
 

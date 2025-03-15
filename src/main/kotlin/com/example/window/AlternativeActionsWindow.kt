@@ -1,5 +1,6 @@
 package com.example.window
 
+import com.al3x.housing2.Events.MenuClickEvent
 import com.al3x.housing2.Action.Action
 import org.bukkit.entity.Player
 import xyz.xenondevs.invui.gui.Gui

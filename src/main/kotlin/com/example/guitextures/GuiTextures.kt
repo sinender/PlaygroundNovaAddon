@@ -17,6 +17,15 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/actions/chat_action_settings")
     }
+    //Options for Actions
+    val TELEPORT_OPTIONS = guiTexture("actions/options/teleport_options") {
+        alignment(-25,-21)
+        path("gui/actions/options/teleport_options")
+    }
+    val GENERIC_OPTIONS = guiTexture("actions/options/generic_options") {
+        alignment(-25,-21)
+        path("gui/actions/options/generic_options")
+    }
 
     //Generic
     val ACTIONS_WINDOW = guiTexture("actions_window") {

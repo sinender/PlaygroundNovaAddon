@@ -28,10 +28,11 @@ class CustomMenusWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                     ". . . n f f . . .",
                     ". . . . . . . . .",
-                    ". . . . . . . . .",
-                    "l . a s s s a . r",
+                    "j j j j j j j j j",
+                    "l j a s s s a j r",
                 )
             )
+            .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
             .addIngredient(
                 'l', if (menu?.getItem(45)?.isEmpty != false) {
                     empty_slot

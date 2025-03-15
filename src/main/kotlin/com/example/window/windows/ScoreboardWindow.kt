@@ -27,10 +27,11 @@ class ScoreboardWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    ". . . n n n . . .",
-                    ". . . t t t . . .",
+                    "j j j n n n j j j",
+                    "j j j t t t j j j",
                 )
             )
+            .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
             .addIngredient(
                 't', GuiItems.TITLE.createItemBuilder()
                     .addLoreLines(menu?.getItem(39)?.lore() ?: emptyList()), 39

@@ -28,19 +28,24 @@ class EventActionsWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    ". . . . . . . . .",
-                    "l . . s s s . . r",
+                    "j j j j j j j j j",
+                    "l j j s s s j j r",
                 )
             )
-            .addIngredient(
-                'l', if (menu?.getItem(45)?.isEmpty != false) {
-                    empty_slot
-                } else {
-                    GuiItems.PREVIOUS_PAGE.createItemBuilder()
-                        .addLoreLines(menu?.getItem(45)?.lore() ?: emptyList())
-                }, 45
-            )
-            .addIngredient(
+            .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
+            if (menu?.getItem(10)?.itemMeta?.displayName == "§aPlayer Join") {
+                upperGui!!.addIngredient('l', empty_slot)
+            } else {
+                upperGui!!.addIngredient(
+                    'l', if (menu?.getItem(45)?.isEmpty != false) {
+                        empty_slot
+                    } else {
+                        GuiItems.PREVIOUS_PAGE.createItemBuilder()
+                            .addLoreLines(menu?.getItem(45)?.lore() ?: emptyList())
+                    }, 45
+                )
+            }
+            upperGui!!.addIngredient(
                 'r', if (menu?.getItem(53)?.isEmpty != false) {
                     empty_slot
                 } else {
@@ -48,7 +53,7 @@ class EventActionsWindow : AlternativeWindow() {
                         .addLoreLines(menu?.getItem(53)?.lore() ?: emptyList())
                 }, 53
             )
-            .addIngredient(
+            upperGui!!.addIngredient(
                 's', GuiItems.SEARCH.createItemBuilder()
                     .addLoreLines(menu?.getItem(51)?.lore() ?: emptyList()), 51
             )
