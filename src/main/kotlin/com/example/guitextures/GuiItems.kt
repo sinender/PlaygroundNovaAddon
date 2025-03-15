@@ -39,6 +39,8 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     //Action Edit GUI Items
     val ADD_EXPRESSION = guiItem("action.settings/add_expression", "§aAdd Expression", false, 3)
     val ADD_EXPRESSION_EMPTY = emptyItem("add_expression", "§aAdd Expression")
+    val LIMIT_REACHED = guiItem("action.settings/limit_reached", "§cLimit Reached", false, 3)
+    val LIMIT_REACHED_EMPTY = emptyItem("limit_reached", "§cLimit Reached")
 
     //Systems > Functions GUI Items
     val ADD_FUNCTION = guiItem("functions/add_function", "§aAdd Function")
@@ -88,6 +90,7 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NEXT_PAGE = guiItem("right_arrow", "§aNext Page")
     val BACK = emptyItem("back", "§cGo Back")
     val SEARCH = emptyItem("search", "§eSearch")
+    val NOT_CLICKABLE = emptyItem("not_clickable", "")
 
     private fun emptyItem(
         name: String,

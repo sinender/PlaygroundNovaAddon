@@ -1,5 +1,6 @@
 package com.example.window
 
+import com.al3x.housing2.Events.MenuClickEvent
 import com.al3x.housing2.Menus.Menu
 import org.bukkit.entity.Player
 import xyz.xenondevs.invui.gui.Gui
@@ -24,7 +25,6 @@ abstract class AlternativeWindow {
     fun Gui.Builder<*, *>.setStructure(structure: ArrayList<String>): Gui.Builder<*, *> {
         setStructure(*structure.toTypedArray())
         structures[this] = structure
-
         return this
     }
 
@@ -36,7 +36,6 @@ abstract class AlternativeWindow {
         }
 
         ingredients[this]!!.add(Ingredient(char, item, slot))
-
         return this
     }
 
@@ -45,7 +44,7 @@ abstract class AlternativeWindow {
 
 fun Gui.Builder<*, *>.getStructure(): Structure? {
     try {
-        var field = this.javaClass.superclass.getDeclaredField("structure")
+        val field = this.javaClass.superclass.getDeclaredField("structure")
         field.isAccessible = true
         return field.get(this) as Structure
     } catch (e: NoSuchFieldException) {
@@ -58,7 +57,7 @@ fun Gui.Builder<*, *>.getStructure(): Structure? {
 
 fun Structure.getAsString(): String? {
     try {
-        var field = this.javaClass.getDeclaredField("structureData")
+        val field = this.javaClass.getDeclaredField("structureData")
         field.isAccessible = true
         return field.get(this) as String
     } catch (e: NoSuchFieldException) {
