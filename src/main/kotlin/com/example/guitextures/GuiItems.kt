@@ -8,6 +8,8 @@ import org.joml.Vector3f
 import xyz.xenondevs.nova.addon.registry.ItemRegistry
 import xyz.xenondevs.nova.initialize.Init
 import xyz.xenondevs.nova.initialize.InitStage
+import xyz.xenondevs.nova.resources.builder.data.TintSource
+import xyz.xenondevs.nova.resources.builder.layout.item.ConditionItemModelProperty
 import xyz.xenondevs.nova.resources.builder.model.Model
 import xyz.xenondevs.nova.world.item.NovaItem
 import xyz.xenondevs.nova.world.item.behavior.ItemBehaviorHolder
@@ -39,6 +41,13 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     //Action Edit GUI Items
     val ADD_EXPRESSION = guiItem("action.settings/add_expression", "§aAdd Expression", false, 3)
     val ADD_EXPRESSION_EMPTY = emptyItem("add_expression", "§aAdd Expression")
+    val LIMIT_REACHED = guiItem("action.settings/limit_reached", "§cLimit Reached", false, 3)
+    val LIMIT_REACHED_EMPTY = emptyItem("limit_reached", "§cLimit Reached")
+
+    //Action Enum GUI Items
+    val INVOKERS_LOCATION = emptyItem("invokers_location", "§eInvokers Location")
+    val CUSTOM_LOCATION = emptyItem("custom_location", "§bCustom Location")
+    val HOUSE_SPAWN_LOCATION = emptyItem("house_spawn_location", "§aHouse Spawn Location")
 
     //Systems > Functions GUI Items
     val ADD_FUNCTION = guiItem("functions/add_function", "§aAdd Function")
@@ -88,6 +97,11 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NEXT_PAGE = guiItem("right_arrow", "§aNext Page")
     val BACK = emptyItem("back", "§cGo Back")
     val SEARCH = emptyItem("search", "§eSearch")
+    val NOT_CLICKABLE = emptyItem("not_clickable", "")
+
+    //Gui Visuals
+    val TP_ONE = guiItem("gui.visuals/tp_one", "", false, 4)
+    val TP_TWO = guiItem("gui.visuals/tp_two", "", false, 4)
 
     private fun emptyItem(
         name: String,
@@ -122,6 +136,10 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
                 scale = Vector3d(3.3, 1.0, 1.0),
                 translation = Vector3d(18.0, 2.0, 0.0)
             )
+            4 -> Model.Display(
+                scale = Vector3d(1.0,1.0,1.0),
+                translation = Vector3d(0.0,36.0,0.0)
+            )
             else -> Model.Display(
                 scale = Vector3d(1.0, 1.0, 1.0),
                 translation = Vector3d(0.0, 0.0, 0.0)
@@ -129,9 +147,9 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
         }
 
         modelDefinition {
-            model = buildModel { createGuiModel(false, stretched, "item/gui/$name",
-                display = display
-            ) }
+            model = buildModel {
+                createGuiModel(false, stretched, "item/gui/$name", display = display)
+            }
         }
     }
 }

@@ -27,9 +27,10 @@ class SystemsWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    ". . . . . . . . .",
+                    "j j j j j j j j j",
                 )
             )
+            .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
         val allowedSlots =
             intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34)
         upperGui!!.addModifier {
