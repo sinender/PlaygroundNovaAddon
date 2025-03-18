@@ -28,7 +28,7 @@ addon {
     version = project.version.toString()
     main = "com.example.ExampleAddon" // TODO: Change this to your main class
     pluginMain.set("com.example.ExamplePlugin")
-    dependencies.add(PluginDependency("Housing2", PluginDependency.Stage.SERVER, PluginDependency.Load.AFTER, true, true))
+    dependencies.add(PluginDependency("Housing2", PluginDependency.Stage.SERVER, PluginDependency.Load.BEFORE, true, true))
     
     // output directory for the generated addon jar is read from the "outDir" project property (-PoutDir="...")
     val outDir = project.findProperty("outDir")
