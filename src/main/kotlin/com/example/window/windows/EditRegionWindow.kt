@@ -41,7 +41,6 @@ class EditRegionWindow : AlternativeWindow() {
 
         return upperGui!!
     }
-
     override fun createLowerGui(): Gui.Builder<*, *> {
         lowerGui = Gui.normal()
             .setStructure(
