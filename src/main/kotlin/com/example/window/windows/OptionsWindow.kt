@@ -31,9 +31,9 @@ class OptionsWindow : AlternativeWindow() {
             .setStructure(
                 arrayListOf(
                     ". . . . . . . . .",
-                    ". j j j j . . . .",
+                    ". . . . . . . . .",
                     ". i . c c c . h .",
-                    ". a d a a . . . .",
+                    ". . . . . . . . .",
                     ". . . . . . . . .",
                     ". . . s s s . . .",
                 )
@@ -42,37 +42,10 @@ class OptionsWindow : AlternativeWindow() {
             upperGui!!.addIngredient('i', GuiItems.INVOKERS_LOCATION.createItemBuilder(), 13)
             upperGui!!.addIngredient('c', GuiItems.CUSTOM_LOCATION.createItemBuilder(), 10)
             upperGui!!.addIngredient('h', GuiItems.HOUSE_SPAWN_LOCATION.createItemBuilder(), 11)
-            val allowedSlots =
-                intArrayOf(10, 11, 12, 13)
-            upperGui!!.addModifier {
-                for (slot in allowedSlots) {
-                    it.setItem(
-                        slot, Item.simple(
-                            menu?.getItem(slot) ?: DefaultGuiItems.INVISIBLE_ITEM.createItemStack(0)
-                        )
-                    )
-                }
-            }
-            upperGui!!.addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
-            upperGui!!.addIngredient('a', GuiItems.TP_ONE.createItemBuilder(), 0)
-            upperGui!!.addIngredient('d', GuiItems.TP_TWO.createItemBuilder(), 0)
         } else {
-            val allowedSlots =
-                intArrayOf(10, 11, 12, 13)
-            upperGui!!.addModifier {
-                for (slot in allowedSlots) {
-                    it.setItem(
-                        slot, Item.simple(
-                            menu?.getItem(slot) ?: DefaultGuiItems.INVISIBLE_ITEM.createItemStack(0)
-                        )
-                    )
-                }
-            }
             upperGui!!.addIngredient('i', empty_slot)
             upperGui!!.addIngredient('c', empty_slot)
             upperGui!!.addIngredient('h', empty_slot)
-            upperGui!!.addIngredient('a', empty_slot)
-            upperGui!!.addIngredient('d', empty_slot)
         }
             upperGui!!.addIngredient(
                 's', GuiItems.SEARCH.createItemBuilder()

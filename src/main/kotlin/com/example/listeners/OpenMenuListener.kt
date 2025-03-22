@@ -22,6 +22,7 @@ class OpenMenuListener : Listener {
             "FunctionsMenu" -> FunctionsWindow()
             "HousingMenu" -> PlaygroundWindow()
             "RegionsMenu" -> RegionsWindow()
+            "RegionEditMenu" -> EditRegionWindow()
             "EventActionsMenu" -> EventActionsWindow()
             "ScoreboardMenu" -> ScoreboardWindow()
             "CommandsMenu" -> CommandsWindow()
@@ -32,6 +33,7 @@ class OpenMenuListener : Listener {
             "SystemsMenu" -> SystemsWindow()
             "ActionEditMenu" -> ChatActionSettingsWindow()
             "ActionEnumMenu" -> OptionsWindow()
+            "HouseBrowserMenu" -> BrowserWindow()
             else -> return
         }
 

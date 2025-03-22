@@ -7,7 +7,11 @@ import xyz.xenondevs.nova.initialize.InitStage
 
 @Init(stage = InitStage.PRE_PACK)
 object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
-
+    //Browser
+    val PLAYGROUND_BROWSER_WINDOW = guiTexture("browser_window") {
+        alignment(-25,-21)
+        path("gui/browser_window")
+    }
     //Actions
     val CONDITIONALS = guiTexture("actions/conditionals") {
          alignment(-25,-21)
@@ -46,6 +50,11 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/regions_window")
     }
+        // Edit Region window
+        val EDIT_REGION_WINDOW = guiTexture("edit_region_window") {
+            alignment(-25,-21)
+            path("gui/edit_region_window")
+        }
     val EVENTACTIONS_WINDOW = guiTexture("eventactions_window") {
         alignment(-25,-21)
         path("gui/eventactions_window")

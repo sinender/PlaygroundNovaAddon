@@ -56,6 +56,13 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
 
     //Systems > Regions GUI Items
     val CREATE_REGION = guiItem("regions/create_region", "§aCreate Region")
+        //Region Edit Gui Items
+        val DELETE_REGION = emptyItem("delete_region", "§cDelete Region")
+        val EXIT_ACTIONS_REGION = emptyItem("exit_actions", "§cExit Actions")
+        val ENTRY_ACTIONS_REGION = emptyItem("entry_actions", "§bEntry Actions")
+        val PVP_SETTINGS_REGION = emptyItem("pvp_settings", "§7Pvp Settings")
+        val TELEPORT_REGION = emptyItem("teleport_region", "§dTeleport to Region")
+        val RENAME_REGION = emptyItem("rename_region", "§eRename Region")
 
     //Systems > Scoreboard GUI Items
     val TITLE = emptyItem("title", "§bTitle")
