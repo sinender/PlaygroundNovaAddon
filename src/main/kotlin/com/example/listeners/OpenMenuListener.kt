@@ -34,6 +34,7 @@ class OpenMenuListener : Listener {
             "ActionEditMenu" -> ChatActionSettingsWindow()
             "ActionEnumMenu" -> OptionsWindow()
             "HouseBrowserMenu" -> BrowserWindow()
+            "MyHousesMenu" -> MyCreationsWindow()
             else -> return
         }
 

@@ -12,6 +12,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/browser_window")
     }
+    val MY_CREATIONS_WINDOW = guiTexture("my_creations_window") {
+        alignment(-25,-21)
+        path("gui/my_creations_window")
+    }
     //Actions
     val CONDITIONALS = guiTexture("actions/conditionals") {
          alignment(-25,-21)
