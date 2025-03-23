@@ -38,6 +38,17 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NO_ACTION_EMPTY = emptyItem("no_action", "§cNo Actions!")
     val RESTORE = guiItem("action/restore", "§aRestore")
 
+    //Edit Item GUI Items
+    val ITEM_TYPE = emptyItem("item_type", "§eSet Item Type!")
+    val EDIT_ITEM_ENCHANTS = emptyItem("edit_enchants", "§dEdit Enchantments")
+    val EDIT_ITEM_ACTIONS = emptyItem("edit_actions", "§aEdit Actions")
+    val EDIT_ITEM_FLAGS = emptyItem("edit_flags", "§fEdit Item Flags")
+    val SET_CUSTOM_MODEL_DATA = emptyItem("set_custom_model_data", "§dSet Custom Model Data")
+    val RENAME_ITEM = emptyItem("rename_item", "§eRename Item")
+    val EDIT_ITEM_LORE = emptyItem("edit_lore", "§bEdit Lore")
+    val BREAKABLE_ITEM = guiItem("edit.item/breakable", "§cBreakable")
+    val UNBREAKABLE_ITEM = guiItem("edit.item/unbreakable", "§aUnbreakable")
+
     //Action Edit GUI Items
     val ADD_EXPRESSION = guiItem("action.settings/add_expression", "§aAdd Expression", false, 3)
     val ADD_EXPRESSION_EMPTY = emptyItem("add_expression", "§aAdd Expression")

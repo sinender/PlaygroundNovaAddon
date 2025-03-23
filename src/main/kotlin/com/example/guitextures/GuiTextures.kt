@@ -35,6 +35,12 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         path("gui/actions/options/generic_options")
     }
 
+    //Edit Item
+    val EDIT_ITEM_WINDOW = guiTexture("edit_item_window") {
+        alignment(-26,-21)
+        path("gui/edit_item_window")
+    }
+
     //Generic
     val ACTIONS_WINDOW = guiTexture("actions_window") {
         alignment(-25,-21)
