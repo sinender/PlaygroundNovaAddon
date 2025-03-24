@@ -35,7 +35,10 @@ class OpenMenuListener : Listener {
             "ActionEnumMenu" -> OptionsWindow()
             "HouseBrowserMenu" -> BrowserWindow()
             "MyHousesMenu" -> MyCreationsWindow()
+            "EditHouseMenu" -> EditCreationWindow()
+            "ConfirmMenu" -> ConfirmationWindow()
             "EditItemMainMenu" -> EditItemWindow()
+            "PaginationMenu" -> SelectItemWindow()
             else -> return
         }
 

@@ -16,6 +16,16 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/my_creations_window")
     }
+        //Edit Creation
+        val EDIT_CREATION_WINDOW = guiTexture("edit_creation_window") {
+            alignment(-25,-21)
+            path("gui/edit_creation_window")
+        }
+        //Confirmation
+            val CONFIRMATION_WINDOW = guiTexture("confirmation_window") {
+            alignment(-25,-21)
+            path("gui/confirmation_window")
+        }
     //Actions
     val CONDITIONALS = guiTexture("actions/conditionals") {
          alignment(-25,-21)
@@ -39,6 +49,12 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
     val EDIT_ITEM_WINDOW = guiTexture("edit_item_window") {
         alignment(-26,-21)
         path("gui/edit_item_window")
+    }
+
+    //Select Item
+    val SELECT_ITEM_WINDOW = guiTexture("select_item_window") {
+        alignment(-25,-21)
+        path("gui/select_item_window")
     }
 
     //Generic

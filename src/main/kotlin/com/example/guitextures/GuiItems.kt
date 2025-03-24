@@ -38,6 +38,15 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NO_ACTION_EMPTY = emptyItem("no_action", "§cNo Actions!")
     val RESTORE = guiItem("action/restore", "§aRestore")
 
+    //Edit Creation GUI Items
+    val CHANGE_CREATION_ICON = emptyItem("change_creation", "§aChange Icon")
+    val DUPLICATE_CREATION = emptyItem("duplicate_creation", "§bDuplicate Creation")
+    val DELETE_CREATION = emptyItem("delete_creation", "§cDelete Creation")
+
+    //Confirmation GUI Items
+    val CONFIRM = emptyItem("cancel", "§aConfirm")
+    val CANCEL = emptyItem("confirm", "§cCancel")
+
     //Edit Item GUI Items
     val ITEM_TYPE = emptyItem("item_type", "§eSet Item Type!")
     val EDIT_ITEM_ENCHANTS = emptyItem("edit_enchants", "§dEdit Enchantments")
@@ -113,7 +122,7 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     //General GUI Items
     val PREVIOUS_PAGE = guiItem("left_arrow", "§aPrevious Page")
     val NEXT_PAGE = guiItem("right_arrow", "§aNext Page")
-    val BACK = emptyItem("back", "§cGo Back")
+    val BACK = emptyItem("back", "§eGo Back")
     val SEARCH = emptyItem("search", "§eSearch")
     val NOT_CLICKABLE = emptyItem("not_clickable", "")
 
