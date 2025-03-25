@@ -84,6 +84,20 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
         val TELEPORT_REGION = emptyItem("teleport_region", "§dTeleport to Region")
         val RENAME_REGION = emptyItem("rename_region", "§eRename Region")
 
+        //Command Edit Gui Items
+        val DELETE_COMMAND = emptyItem("delete_command", "§cDelete Command")
+        val EDIT_ARGUMENTS = emptyItem("edit_args", "§aEdit Arguments")
+        val EDIT_COMMAND_PRIORITY = emptyItem("edit_command_priority", "§fEdit Group Priority")
+        val RENAME_COMMAND = emptyItem("rename_command", "§eRename Command")
+
+        //Command Edit Gui Items
+        val DELETE_FUNCTION = emptyItem("delete_function", "§cDelete Function")
+        val EDIT_DESCRIPTION = emptyItem("edit_desc", "§7Edit Description")
+        val EDIT_FUNCTION_ICON = emptyItem("edit_icon", "§eEdit Icon")
+        val TOGGLE_GLOBAL = emptyItem("toggle_global", "§bToggle Global")
+        val AUTOMATIC_EXECUTIONS = emptyItem("automatic_execution", "§aAutomatic Executions")
+        val RENAME_FUNCTION = emptyItem("rename_function", "§eRename Function")
+
     //Systems > Scoreboard GUI Items
     val TITLE = emptyItem("title", "§bTitle")
     val NEW_LINE = emptyItem("add_line", "§aAdd Line")
