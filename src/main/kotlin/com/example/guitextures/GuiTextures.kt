@@ -7,7 +7,25 @@ import xyz.xenondevs.nova.initialize.InitStage
 
 @Init(stage = InitStage.PRE_PACK)
 object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
-
+    //Browser
+    val PLAYGROUND_BROWSER_WINDOW = guiTexture("browser_window") {
+        alignment(-25,-21)
+        path("gui/browser_window")
+    }
+    val MY_CREATIONS_WINDOW = guiTexture("my_creations_window") {
+        alignment(-25,-21)
+        path("gui/my_creations_window")
+    }
+        //Edit Creation
+        val EDIT_CREATION_WINDOW = guiTexture("edit_creation_window") {
+            alignment(-25,-21)
+            path("gui/edit_creation_window")
+        }
+        //Confirmation
+            val CONFIRMATION_WINDOW = guiTexture("confirmation_window") {
+            alignment(-25,-21)
+            path("gui/confirmation_window")
+        }
     //Actions
     val CONDITIONALS = guiTexture("actions/conditionals") {
          alignment(-25,-21)
@@ -25,6 +43,18 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
     val GENERIC_OPTIONS = guiTexture("actions/options/generic_options") {
         alignment(-25,-21)
         path("gui/actions/options/generic_options")
+    }
+
+    //Edit Item
+    val EDIT_ITEM_WINDOW = guiTexture("edit_item_window") {
+        alignment(-26,-21)
+        path("gui/edit_item_window")
+    }
+
+    //Select Item
+    val SELECT_ITEM_WINDOW = guiTexture("select_item_window") {
+        alignment(-25,-21)
+        path("gui/select_item_window")
     }
 
     //Generic
@@ -46,6 +76,22 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-25,-21)
         path("gui/regions_window")
     }
+        // Edit Region window
+        val EDIT_REGION_WINDOW = guiTexture("edit_region_window") {
+            alignment(-25,-21)
+            path("gui/edit_region_window")
+        }
+        // Edit Region window
+        val EDIT_COMMAND_WINDOW = guiTexture("edit_command_window") {
+            alignment(-25,-21)
+            path("gui/edit_command_window")
+        }
+        // Edit Function window
+        val EDIT_FUNCTION_WINDOW = guiTexture("edit_function_window") {
+            alignment(-25,-21)
+            path("gui/edit_function_window")
+        }
+
     val EVENTACTIONS_WINDOW = guiTexture("eventactions_window") {
         alignment(-25,-21)
         path("gui/eventactions_window")

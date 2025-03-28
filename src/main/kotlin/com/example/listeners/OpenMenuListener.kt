@@ -20,11 +20,14 @@ class OpenMenuListener : Listener {
             "AddActionMenu" -> AddActionsWindow()
             "AddConditionMenu" -> AddActionsWindow()
             "FunctionsMenu" -> FunctionsWindow()
+            "FunctionSettingsMenu" -> EditFunctionWindow()
             "HousingMenu" -> PlaygroundWindow()
             "RegionsMenu" -> RegionsWindow()
+            "RegionEditMenu" -> EditRegionWindow()
             "EventActionsMenu" -> EventActionsWindow()
             "ScoreboardMenu" -> ScoreboardWindow()
             "CommandsMenu" -> CommandsWindow()
+            "CommandEditMenu" -> EditCommandWindow()
             "LayoutsMenu" -> LayoutsWindow()
             "TeamsMenu" -> TeamsWindow()
             "CustomMenusMenu" -> CustomMenusWindow()
@@ -32,6 +35,12 @@ class OpenMenuListener : Listener {
             "SystemsMenu" -> SystemsWindow()
             "ActionEditMenu" -> ChatActionSettingsWindow()
             "ActionEnumMenu" -> OptionsWindow()
+            "HouseBrowserMenu" -> BrowserWindow()
+            "MyHousesMenu" -> MyCreationsWindow()
+            "EditHouseMenu" -> EditCreationWindow()
+            "ConfirmMenu" -> ConfirmationWindow()
+            "EditItemMainMenu" -> EditItemWindow()
+            "EnumMenu" -> SelectItemWindow()
             else -> return
         }
 

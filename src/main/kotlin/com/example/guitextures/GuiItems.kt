@@ -38,6 +38,26 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val NO_ACTION_EMPTY = emptyItem("no_action", "§cNo Actions!")
     val RESTORE = guiItem("action/restore", "§aRestore")
 
+    //Edit Creation GUI Items
+    val CHANGE_CREATION_ICON = emptyItem("change_creation", "§aChange Icon")
+    val DUPLICATE_CREATION = emptyItem("duplicate_creation", "§bDuplicate Creation")
+    val DELETE_CREATION = emptyItem("delete_creation", "§cDelete Creation")
+
+    //Confirmation GUI Items
+    val CONFIRM = emptyItem("cancel", "§aConfirm")
+    val CANCEL = emptyItem("confirm", "§cCancel")
+
+    //Edit Item GUI Items
+    val ITEM_TYPE = emptyItem("item_type", "§eSet Item Type!")
+    val EDIT_ITEM_ENCHANTS = emptyItem("edit_enchants", "§dEdit Enchantments")
+    val EDIT_ITEM_ACTIONS = emptyItem("edit_actions", "§aEdit Actions")
+    val EDIT_ITEM_FLAGS = emptyItem("edit_flags", "§fEdit Item Flags")
+    val SET_CUSTOM_MODEL_DATA = emptyItem("set_custom_model_data", "§dSet Custom Model Data")
+    val RENAME_ITEM = emptyItem("rename_item", "§eRename Item")
+    val EDIT_ITEM_LORE = emptyItem("edit_lore", "§bEdit Lore")
+    val BREAKABLE_ITEM = guiItem("edit.item/breakable", "§cBreakable")
+    val UNBREAKABLE_ITEM = guiItem("edit.item/unbreakable", "§aUnbreakable")
+
     //Action Edit GUI Items
     val ADD_EXPRESSION = guiItem("action.settings/add_expression", "§aAdd Expression", false, 3)
     val ADD_EXPRESSION_EMPTY = emptyItem("add_expression", "§aAdd Expression")
@@ -56,6 +76,27 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
 
     //Systems > Regions GUI Items
     val CREATE_REGION = guiItem("regions/create_region", "§aCreate Region")
+        //Region Edit Gui Items
+        val DELETE_REGION = emptyItem("delete_region", "§cDelete Region")
+        val EXIT_ACTIONS_REGION = emptyItem("exit_actions", "§cExit Actions")
+        val ENTRY_ACTIONS_REGION = emptyItem("entry_actions", "§bEntry Actions")
+        val PVP_SETTINGS_REGION = emptyItem("pvp_settings", "§7Pvp Settings")
+        val TELEPORT_REGION = emptyItem("teleport_region", "§dTeleport to Region")
+        val RENAME_REGION = emptyItem("rename_region", "§eRename Region")
+
+        //Command Edit Gui Items
+        val DELETE_COMMAND = emptyItem("delete_command", "§cDelete Command")
+        val EDIT_ARGUMENTS = emptyItem("edit_args", "§aEdit Arguments")
+        val EDIT_COMMAND_PRIORITY = emptyItem("edit_command_priority", "§fEdit Group Priority")
+        val RENAME_COMMAND = emptyItem("rename_command", "§eRename Command")
+
+        //Command Edit Gui Items
+        val DELETE_FUNCTION = emptyItem("delete_function", "§cDelete Function")
+        val EDIT_DESCRIPTION = emptyItem("edit_desc", "§7Edit Description")
+        val EDIT_FUNCTION_ICON = emptyItem("edit_icon", "§eEdit Icon")
+        val TOGGLE_GLOBAL = emptyItem("toggle_global", "§bToggle Global")
+        val AUTOMATIC_EXECUTIONS = emptyItem("automatic_execution", "§aAutomatic Executions")
+        val RENAME_FUNCTION = emptyItem("rename_function", "§eRename Function")
 
     //Systems > Scoreboard GUI Items
     val TITLE = emptyItem("title", "§bTitle")
@@ -95,7 +136,7 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     //General GUI Items
     val PREVIOUS_PAGE = guiItem("left_arrow", "§aPrevious Page")
     val NEXT_PAGE = guiItem("right_arrow", "§aNext Page")
-    val BACK = emptyItem("back", "§cGo Back")
+    val BACK = emptyItem("back", "§eGo Back")
     val SEARCH = emptyItem("search", "§eSearch")
     val NOT_CLICKABLE = emptyItem("not_clickable", "")
 
