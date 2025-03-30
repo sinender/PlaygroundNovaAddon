@@ -90,16 +90,60 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
         val EDIT_COMMAND_PRIORITY = emptyItem("edit_command_priority", "§fEdit Group Priority")
         val RENAME_COMMAND = emptyItem("rename_command", "§eRename Command")
 
-        //Command Edit Gui Items
+        //Function Edit Gui Items
         val DELETE_FUNCTION = emptyItem("delete_function", "§cDelete Function")
         val EDIT_DESCRIPTION = emptyItem("edit_desc", "§7Edit Description")
         val EDIT_FUNCTION_ICON = emptyItem("edit_icon", "§eEdit Icon")
-        val TOGGLE_GLOBAL = emptyItem("toggle_global", "§bToggle Global")
+        val LOCAL = guiItem("functions/local", "§bToggle Global", false, 3)
+        val LOCAL_EMPTY = emptyItem("local_empty", "§bToggle Global")
+        val GLOBAL = guiItem("functions/global", "§bToggle Global", false, 3)
+        val GLOBAL_EMPTY = emptyItem("global_empty", "§bToggle Global")
         val AUTOMATIC_EXECUTIONS = emptyItem("automatic_execution", "§aAutomatic Executions")
         val RENAME_FUNCTION = emptyItem("rename_function", "§eRename Function")
 
+        //Layout Edit Gui Items
+        val DELETE_LAYOUT = emptyItem("delete_layout", "§cDelete Layout")
+        val SAVE_LAYOUT = emptyItem("save_layout", "§aSave Layout")
+        val IMPORT_LAYOUT = emptyItem("import_layout", "§bImport Layout")
+        val APPLY_LAYOUT = emptyItem("apply_layout", "§dApply Layout")
+        val ARMOR_LAYOUT = emptyItem("edit_layout_armor", "§7Change Armor")
+        val OFFHAND_LAYOUT = emptyItem("edit_layout_offhand", "§7Change Offhand")
+
+        //Team Edit Gui Items
+        val DELETE_TEAM = emptyItem("delete_team", "§cDelete Team")
+        val RENAME_TEAM = emptyItem("rename_team", "§eRename Team")
+        val TEAM_PREFIX = emptyItem("team_prefix", "§dChange Prefix")
+        val TEAM_SUFFIX = emptyItem("team_suffix", "§dChange Prefix")
+        val TEAM_COLOR = emptyItem("team_color", "§7Change Color")
+        val TEAM_DISPLAY = emptyItem("team_display", "§bChange Display Name")
+        val FFIRE_ENABLED = guiItem("teams/enabled", "§bToggle Friendly Fire", false, 3)
+        val FFIRE_ENABLED_EMPTY = emptyItem("friendly_fire_enabled", "§bToggle Friendly Fire")
+        val FFIRE_DISABLED = guiItem("teams/disabled", "§bToggle Friendly Fire", false, 3)
+        val FFIRE_DISABLED_EMPTY = emptyItem("friendly_fire_disabled", "§bToggle Friendly Fire")
+
+        //Menu Edit Gui Items
+        val DELETE_MENU = emptyItem("delete_menu", "§cDelete Menu")
+        val VIEW_MENU = emptyItem("view_menu", "§dView Menu")
+        val REFRESH_RATE = emptyItem("refresh_rate", "§eSet Refresh Rate")
+        val CHANGE_MENU_SIZE = emptyItem("change_size", "§bChange Size")
+        val EDIT_MENU_ITEMS = emptyItem("edit_menu_items", "§aEdit Menu Elements")
+
+        //NPC Edit Gui Items
+        val DELETE_NPC = emptyItem("delete_npc", "§cDelete NPC")
+        val NPC_ACTIONS = emptyItem("npc_actions", "§aClick Actions")
+        val NPC_HOLO = emptyItem("npc_hologram", "§bEdit Hologram")
+        val NPC_NAME = emptyItem("npc_name", "§eNPC Name")
+        val NPC_INFO = emptyItem("npc_info", "§7NPC Info")
+        val NPC_SKIN = emptyItem("npc_skin", "§bChange Skin")
+        val NPC_TYPE = emptyItem("npc_type", "§dEntity Type")
+        val NPC_NAVIGATION = emptyItem("npc_navigation", "§6Navigation")
+        val NPC_LOOK_TRUE = guiItem("npcs/look_true", "§bLook at Players")
+        val NPC_LOOK_FALSE = guiItem("npcs/look_false", "§bLook at Players")
+        val NPC_ARMOR = emptyItem("npc_armor", "§fChange Equipment")
+        val NPC_SETTINGS = emptyItem("npc_settings", "§fEntity Settings")
+
     //Systems > Scoreboard GUI Items
-    val TITLE = emptyItem("title", "§bTitle")
+    val TITLE = emptyItem("title", "§bChange Title")
     val NEW_LINE = emptyItem("add_line", "§aAdd Line")
 
     //Systems > Commands GUI Items
@@ -139,6 +183,7 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val BACK = emptyItem("back", "§eGo Back")
     val SEARCH = emptyItem("search", "§eSearch")
     val NOT_CLICKABLE = emptyItem("not_clickable", "")
+    val CLOSE = emptyItem("close", "§cClose")
 
     //Gui Visuals
     val TP_ONE = guiItem("gui.visuals/tp_one", "", false, 4)

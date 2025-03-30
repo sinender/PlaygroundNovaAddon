@@ -81,7 +81,7 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-26,-21)
         path("gui/edit_region_window")
     }
-    // Edit Region window
+    // Edit Command window
     val EDIT_COMMAND_WINDOW = guiTexture("edit_command_window") {
         alignment(-26,-21)
         path("gui/edit_command_window")
@@ -90,6 +90,26 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
     val EDIT_FUNCTION_WINDOW = guiTexture("edit_function_window") {
         alignment(-26,-21)
         path("gui/edit_function_window")
+    }
+    // Edit Layout window
+    val EDIT_LAYOUT_WINDOW = guiTexture("edit_layout_window") {
+        alignment(-26,-21)
+        path("gui/edit_layout_window")
+    }
+    // Edit Team window
+    val EDIT_TEAM_WINDOW = guiTexture("edit_team_window") {
+        alignment(-26,-21)
+        path("gui/edit_team_window")
+    }
+    // Edit Menu window
+    val EDIT_MENU_WINDOW = guiTexture("edit_menu_window") {
+        alignment(-26,-21)
+        path("gui/edit_menu_window")
+    }
+    // Edit Npc window
+    val EDIT_NPC_WINDOW = guiTexture("edit_npc_window") {
+        alignment(-26,-21)
+        path("gui/edit_npc_window")
     }
 
     val EVENTACTIONS_WINDOW = guiTexture("eventactions_window") {
