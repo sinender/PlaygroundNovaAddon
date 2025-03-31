@@ -46,6 +46,19 @@ class OptionsWindow : AlternativeWindow() {
             upperGui!!.addIngredient('i', empty_slot)
             upperGui!!.addIngredient('c', empty_slot)
             upperGui!!.addIngredient('h', empty_slot)
+            val allowedSlots =
+                intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34)
+            upperGui!!.addModifier {
+                for (slot in allowedSlots) {
+                    if (menu?.getItem(slot)?.isEmpty == false) {
+                        it.setItem(
+                            slot, Item.simple(
+                                menu?.getItem(slot) ?: DefaultGuiItems.INVISIBLE_ITEM.createItemStack(1)
+                            )
+                        )
+                    }
+                }
+            }
         }
             upperGui!!.addIngredient(
                 's', GuiItems.SEARCH.createItemBuilder()

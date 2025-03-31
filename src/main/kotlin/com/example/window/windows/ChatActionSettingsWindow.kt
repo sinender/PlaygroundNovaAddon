@@ -31,7 +31,7 @@ class ChatActionSettingsWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                     "j j j j j j j j j",
                     "h h h h h h h h h",
-                    "d d d s f f d d d",
+                    "d d d s f f d d d"
                 )
             )
 

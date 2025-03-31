@@ -31,8 +31,8 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
 
     //Action GUI Items
     val ADD_ACTION = guiItem("action/add_action", "§aAdd Action")
-    val EXPORT_ACTION = guiItem("action/export", "§aExport Actions")
-    val IMPORT_ACTION = guiItem("action/import", "§bImport Actions")
+    val EXPORT_ACTION = guiItem("action/export", "§dExport Actions")
+    val IMPORT_ACTION = guiItem("action/import", "§dImport Actions")
     val IMPORT_AUTO = guiItem("action/import_auto", "§bImport Actions from Websocket")
     val NO_ACTION = guiItem("action/no_action", "§cNo Actions!", false, 3)
     val NO_ACTION_EMPTY = emptyItem("no_action", "§cNo Actions!")
