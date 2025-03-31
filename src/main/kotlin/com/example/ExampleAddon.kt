@@ -21,11 +21,8 @@ import java.net.URLDecoder
 object ExampleAddon : Addon() {
     @InitFun
     private fun init() {
-        val plugin = this.plugin ?: return
-        val logger = plugin.logger?
-        logger.info("Copyright (C)smskSoft & pjma")
-        // smskSoft Injection Start
-        // Suggestion: Consider moving this block into its own function.
+        val plugin = this.plugin ?: return;
+        val logger = plugin.logger
         try {
             val targetDir = File("minecraft/assets/textures/gui") // Suggestion: make this configurable by the config file.
             if (!targetDir.exists()) {
@@ -55,7 +52,7 @@ object ExampleAddon : Addon() {
         val jarFile = JarFile(jarPath)
         val entries = jarFile.entries()
         val plugin = this.plugin ?: return
-        val logger = plugin.logger?
+        val logger = plugin.logger
 
         val sourcePrefix = "assets/textures/"
 
@@ -78,7 +75,7 @@ object ExampleAddon : Addon() {
                     }
                 }
 
-                plugin?.logger?.info("Copied: $entryName to ${targetFile.path}")
+                plugin.logger.info("Copied: $entryName to ${targetFile.path}")
             }
         }
 
@@ -87,11 +84,11 @@ object ExampleAddon : Addon() {
 
     private fun copyResourcesFromFileSystem(targetDir: File) {
         val plugin = this.plugin ?: return
-        val logger = plugin.logger?
+        val logger = plugin.logger
         val resourcesDir = File("src/main/resources/assets/textures")
 
         if (!resourcesDir.exists()) {
-            plugin?.logger?.warning("Source directory does not exist: ${resourcesDir.absolutePath}")
+            plugin.logger.warning("Source directory does not exist: ${resourcesDir.absolutePath}")
             return
         }
 
@@ -107,7 +104,7 @@ object ExampleAddon : Addon() {
                 // Copy file
                 Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING)
 
-                plugin?.logger?.info("Copied: $sourcePath to $targetPath")
+                plugin.logger.info("Copied: $sourcePath to $targetPath")
             }
         }
     }
