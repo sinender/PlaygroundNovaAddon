@@ -67,6 +67,11 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-26,-21)
         path("gui/add_actions_window")
     }
+
+    val ACTION_CLIPBOARD_WINDOW = guiTexture("action_clipboard_window") {
+        alignment(-26,-21)
+        path("gui/action_clipboard_window")
+    }
     //Systems
     val FUNCTIONS_WINDOW = guiTexture("functions_window") {
         alignment(-26,-21)
@@ -106,6 +111,31 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-26,-21)
         path("gui/edit_menu_window")
     }
+    // Menu Sizes
+    val MENU_1 = guiTexture("menu_1") {
+        alignment(-26,-21)
+        path("gui/menu.sizes/menu_size_1")
+    }
+    val MENU_2 = guiTexture("menu_2") {
+        alignment(-26,-21)
+        path("gui/menu.sizes/menu_size_2")
+    }
+    val MENU_3 = guiTexture("menu_3") {
+        alignment(-26,-21)
+        path("gui/menu.sizes/menu_size_3")
+    }
+    val MENU_4 = guiTexture("menu_4") {
+        alignment(-26,-21)
+        path("gui/menu.sizes/menu_size_4")
+    }
+    val MENU_5 = guiTexture("menu_5") {
+        alignment(-26,-21)
+        path("gui/menu.sizes/menu_size_5")
+    }
+    val MENU_6 = guiTexture("menu_6") {
+        alignment(-26,-21)
+        path("gui/menu.sizes/menu_size_6")
+    }
     // Edit Npc window
     val EDIT_NPC_WINDOW = guiTexture("edit_npc_window") {
         alignment(-26,-21)
@@ -123,6 +153,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
     val COMMANDS_WINDOW = guiTexture("commands_window") {
         alignment(-26, -21)
         path("gui/commands_window")
+    }
+    val EDIT_ARGS_WINDOW = guiTexture("edit_arguments_window") {
+        alignment(-26, -21)
+        path("gui/edit_arguments_window")
     }
     val LAYOUTS_WINDOW = guiTexture("layouts_window") {
         alignment(-26, -21)

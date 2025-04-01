@@ -8,10 +8,10 @@ import xyz.xenondevs.invui.item.Item
 import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
-class AddActionsWindow : AlternativeWindow() {
+class EditArgumentsWindow : AlternativeWindow() {
     override fun createWindow(): Window.Builder.Normal.Split {
         window = Window.split()
-            .setTitle(GuiTextures.ADD_ACTIONS_WINDOW.component)
+            .setTitle(GuiTextures.EDIT_ARGS_WINDOW.component)
             .setUpperGui(createUpperGui())
             .setLowerGui(createLowerGui())
 
@@ -19,7 +19,6 @@ class AddActionsWindow : AlternativeWindow() {
     }
 
     override fun createUpperGui(): Gui.Builder<*, *> {
-        var empty_slot = DefaultGuiItems.INVISIBLE_ITEM.createItemBuilder()
 
         upperGui = Gui.normal()
             .setStructure(
@@ -29,32 +28,16 @@ class AddActionsWindow : AlternativeWindow() {
                     ". . . n f f . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    "l j j s s s j j r",
+                    "j j a a a a a j j",
                 )
             )
             .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
             .addIngredient(
-                'l', if (menu?.getItem(45)?.isEmpty != false) {
-                    empty_slot
-                } else {
-                    GuiItems.PREVIOUS_PAGE.createItemBuilder()
-                        .addLoreLines(menu?.getItem(45)?.lore() ?: emptyList())
-                }, 45
-            )
-            .addIngredient(
-                'r', if (menu?.getItem(53)?.isEmpty != false) {
-                    empty_slot
-                } else {
-                    GuiItems.NEXT_PAGE.createItemBuilder()
-                        .addLoreLines(menu?.getItem(53)?.lore() ?: emptyList())
-                }, 53
-            )
-            .addIngredient(
-                's', GuiItems.SEARCH.createItemBuilder()
-                    .addLoreLines(menu?.getItem(51)?.lore() ?: emptyList()), 51
+                'a', GuiItems.ADD_ARGUMENT.createItemBuilder()
+                    .addLoreLines(menu?.getItem(50)?.lore() ?: emptyList()), 50
             )
 
-        var name = menu?.getItem(22)?.itemMeta?.displayName?.equals("§cNo Actions!") ?: false
+        var name = menu?.getItem(22)?.itemMeta?.displayName?.equals("§cNo Items!") ?: false
         if (menu?.getItem(22)?.isEmpty == true || !name) {
             val allowedSlots =
                 intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34)
@@ -70,8 +53,8 @@ class AddActionsWindow : AlternativeWindow() {
                 }
             }
         } else {
-            upperGui!!.addIngredient('n', GuiItems.NO_ACTION.createItemBuilder(), 22)
-            upperGui!!.addIngredient('f', GuiItems.NO_ACTION_EMPTY.createItemBuilder(), 22)
+            upperGui!!.addIngredient('n', GuiItems.NO_ITEMS_ARG.createItemBuilder(), 22)
+            upperGui!!.addIngredient('f', GuiItems.NO_ITEMS_ARG_EMPTY.createItemBuilder(), 22)
         }
 
         return upperGui!!

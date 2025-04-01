@@ -71,8 +71,11 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
 
     //Systems > Functions GUI Items
     val ADD_FUNCTION = guiItem("functions/add_function", "§aAdd Function")
-    val NO_ITEMS = guiItem("functions/no_items", "§aNo Items!", false, 3)
-    val NO_ITEMS_EMPTY = emptyItem("no_items", "§aNo Items!")
+    val NO_ITEMS = guiItem("functions/no_items", "§cNo Items!", false, 3)
+    val NO_ITEMS_EMPTY = emptyItem("no_items", "§cNo Items!")
+
+    val NO_ITEMS_ARG = guiItem("functions/no_items_arg", "§cNo Items!", false, 3)
+    val NO_ITEMS_ARG_EMPTY = emptyItem("no_items_arg", "§cNo Items!")
 
     //Systems > Regions GUI Items
     val CREATE_REGION = guiItem("regions/create_region", "§aCreate Region")
@@ -148,6 +151,7 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
 
     //Systems > Commands GUI Items
     val CREATE_COMMAND = guiItem("commands/create_command", "§aCreate Command")
+    val ADD_ARGUMENT = emptyItem("add_argument", "§aAdd Argument")
 
     //Systems > Inventory Layouts GUI Items
     val CREATE_LAYOUT = guiItem("layouts/create_layout", "§aCreate Layout")
@@ -157,6 +161,7 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
 
     //Systems > Custom Menus GUI Items
     val CREATE_MENU = guiItem("custommenus/create_menu", "§aCreate Menu")
+    val MENU_SIZE_SELECTION = emptyItem("menu_size_selection", "§bSelect this size")
 
     //Systems > NPCs GUI Items
     val CREATE_NPC = guiItem("npcs/create_npc", "§aCreate NPC")
