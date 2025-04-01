@@ -181,6 +181,8 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val VISIBILITY_PUBLIC_EMPTY = emptyItem("visibility_public", "§aVisiting Rules")
     val VISIBILITY_PRIVATE = guiItem("playground.menu/visibility_private", "§aVisiting Rules", false, 3)
     val VISIBILITY_PRIVATE_EMPTY = emptyItem("visibility_private", "§aVisiting Rules")
+    val VISIBILITY_WHITELISTED = guiItem("playground.menu/visibility_whitelisted", "§aVisiting Rules", false, 3)
+    val VISIBILITY_WHITELISTED_EMPTY = emptyItem("visibility_whitelisted", "§aVisiting Rules")
 
     //General GUI Items
     val PREVIOUS_PAGE = guiItem("left_arrow", "§aPrevious Page")
