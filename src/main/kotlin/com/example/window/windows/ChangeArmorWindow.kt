@@ -3,16 +3,15 @@ package com.example.window.windows
 import com.example.guitextures.GuiItems
 import com.example.guitextures.GuiTextures
 import com.example.window.AlternativeWindow
-import org.bukkit.ChatColor.stripColor
 import xyz.xenondevs.invui.gui.Gui
 import xyz.xenondevs.invui.item.Item
 import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
-class EditPermissionsWindow : AlternativeWindow() {
+class ChangeArmorWindow : AlternativeWindow() {
     override fun createWindow(): Window.Builder.Normal.Split {
         window = Window.split()
-            .setTitle(GuiTextures.GROUP_PERMISSIONS_WINDOW.component)
+            .setTitle(GuiTextures.CHANGE_ARMOR_WINDOW.component)
             .setUpperGui(createUpperGui())
             .setLowerGui(createLowerGui())
 
@@ -20,7 +19,6 @@ class EditPermissionsWindow : AlternativeWindow() {
     }
 
     override fun createUpperGui(): Gui.Builder<*, *> {
-        var empty_slot = DefaultGuiItems.INVISIBLE_ITEM.createItemBuilder()
 
         upperGui = Gui.normal()
             .setStructure(
@@ -30,28 +28,13 @@ class EditPermissionsWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    "l . . . j . . . r",
+                    ". . . . j . . . .",
                 )
             )
             .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
-            .addIngredient(
-                'l', if (menu?.getItem(45)?.isEmpty != false) {
-                    empty_slot
-                } else {
-                    GuiItems.PREVIOUS_PAGE.createItemBuilder()
-                        .addLoreLines(menu?.getItem(45)?.lore() ?: emptyList())
-                }, 45
-            )
-            .addIngredient(
-                'r', if (menu?.getItem(53)?.isEmpty != false) {
-                    empty_slot
-                } else {
-                    GuiItems.NEXT_PAGE.createItemBuilder()
-                        .addLoreLines(menu?.getItem(53)?.lore() ?: emptyList())
-                }, 53
-            )
+
         val allowedSlots =
-            intArrayOf(10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 28, 29, 30, 31, 32, 33, 34)
+            intArrayOf(13, 22, 31, 40)
         upperGui!!.addModifier {
             for (slot in allowedSlots) {
                 if (menu?.getItem(slot)?.isEmpty == false) {
@@ -66,8 +49,8 @@ class EditPermissionsWindow : AlternativeWindow() {
 
         return upperGui!!
     }
-    override fun createLowerGui(): Gui.Builder<*, *> {
 
+    override fun createLowerGui(): Gui.Builder<*, *> {
         lowerGui = Gui.normal()
             .setStructure(
                 arrayListOf(
@@ -77,7 +60,9 @@ class EditPermissionsWindow : AlternativeWindow() {
                     ". . . . . . . . .",
                 )
             )
-            .addIngredient('b', GuiItems.BACK.createItemBuilder(), 49)
+            .addIngredient('b', GuiItems.BACK.createItemBuilder()
+                .addLoreLines(menu?.getItem(49)?.lore() ?: emptyList()), 49
+            )
         return lowerGui!!
     }
 }

@@ -127,6 +127,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-26,-21)
         path("gui/edit_layout_window")
     }
+    val CHANGE_ARMOR_WINDOW = guiTexture("change_armor_window") {
+        alignment(-26,-21)
+        path("gui/change_armor_window")
+    }
     // Edit Team window
     val EDIT_TEAM_WINDOW = guiTexture("edit_team_window") {
         alignment(-26,-21)
@@ -207,6 +211,10 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
     val PLAYGROUND_WINDOW = guiTexture("playground_window") {
         alignment(-26,-21)
         path("gui/playground_window")
+    }
+    val PLAYER_LISTING_WINDOW = guiTexture("player_listing_window") {
+        alignment(-26,-21)
+        path("gui/player_listing_window")
     }
 
 
