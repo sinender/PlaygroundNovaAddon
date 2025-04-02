@@ -72,6 +72,32 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         alignment(-26,-21)
         path("gui/action_clipboard_window")
     }
+    //Groups
+    val GROUPS_WINDOW = guiTexture("groups_window") {
+        alignment(-26,-21)
+        path("gui/groups_window")
+    }
+    val GROUP_PERMISSIONS_WINDOW = guiTexture("group_permissions_window") {
+        alignment(-26,-21)
+        path("gui/edit_group_permissions_window")
+    }
+    //Group Edits
+    val EDIT_GROUP_WINDOW = guiTexture("edit_group_window") {
+        alignment(-26,-21)
+        path("gui/group.edits/edit_group")
+    }
+    val EDIT_GROUP_A_WINDOW = guiTexture("edit_group_a_window") {
+        alignment(-26,-21)
+        path("gui/group.edits/edit_group_a")
+    }
+    val EDIT_GROUP_B_WINDOW = guiTexture("edit_group_b_window") {
+        alignment(-26,-21)
+        path("gui/group.edits/edit_group_b")
+    }
+    val EDIT_GROUP_AB_WINDOW = guiTexture("edit_group_ab_window") {
+        alignment(-26,-21)
+        path("gui/group.edits/edit_group_ab")
+    }
     //Systems
     val FUNCTIONS_WINDOW = guiTexture("functions_window") {
         alignment(-26,-21)

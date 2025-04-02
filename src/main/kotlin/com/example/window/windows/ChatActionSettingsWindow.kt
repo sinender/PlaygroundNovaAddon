@@ -35,26 +35,29 @@ class ChatActionSettingsWindow : AlternativeWindow() {
                 )
             )
 
-        if (menu?.getItem(10)?.itemMeta?.displayName == "§eStat" || menu?.getItem(10)?.itemMeta?.displayName == "§eMode" || menu?.getItem(10)?.itemMeta?.displayName == "§eNumber 1" || menu?.getItem(10)?.itemMeta?.displayName == "§eString 1" || menu?.getItem(12)?.itemMeta?.displayName == "§eTarget" || menu?.getItem(10)?.itemMeta?.displayName == "§eString") {
-            if (menu?.getItem(24)?.itemMeta?.displayName == "§eAmount" || menu?.getItem(24)?.itemMeta?.displayName == "§eNumber 2" || menu?.getItem(23)?.itemMeta?.displayName == "§eNumber 2" || menu?.getItem(11)?.itemMeta?.displayName == "§eStat Name" || menu?.getItem(12)?.itemMeta?.displayName == "§eTarget" || menu?.getItem(12)?.itemMeta?.displayName == "§eIndex" || menu?.getItem(10)?.itemMeta?.displayName == "§eString") {
-                upperGui!!.addIngredient('s', GuiItems.LIMIT_REACHED.createItemBuilder(), 0)
-                upperGui!!.addIngredient('f', GuiItems.LIMIT_REACHED_EMPTY.createItemBuilder(), 0)
-            } else {
-                upperGui!!.addIngredient('s', GuiItems.ADD_EXPRESSION.createItemBuilder(), 50)
-                upperGui!!.addIngredient('f', GuiItems.ADD_EXPRESSION_EMPTY.createItemBuilder(), 50)
-            }
-            if (menu?.getItem(11)?.itemMeta?.displayName == "§eString") {
-                menu?.getItem(11)?.lore?.let { lore ->
-                    if (lore.any { stripColor(it) == "Middle Click to toggle expression!" }) {
-                    } else {
-                        upperGui!!.addIngredient('s', GuiItems.LIMIT_REACHED.createItemBuilder(), 0)
-                        upperGui!!.addIngredient('f', GuiItems.LIMIT_REACHED_EMPTY.createItemBuilder(), 0)
+        if (menu?.getItem(13)?.itemMeta?.displayName == "§cIgnore Case") {
+        } else {
+            if (menu?.getItem(10)?.itemMeta?.displayName == "§eStat" || menu?.getItem(10)?.itemMeta?.displayName == "§eMode" || menu?.getItem(10)?.itemMeta?.displayName == "§eNumber 1" || menu?.getItem(10)?.itemMeta?.displayName == "§eString 1" || menu?.getItem(12)?.itemMeta?.displayName == "§eTarget" || menu?.getItem(10)?.itemMeta?.displayName == "§eString") {
+                if (menu?.getItem(24)?.itemMeta?.displayName == "§eAmount" || menu?.getItem(24)?.itemMeta?.displayName == "§eNumber 2" || menu?.getItem(23)?.itemMeta?.displayName == "§eNumber 2" || menu?.getItem(11)?.itemMeta?.displayName == "§eStat Name" || menu?.getItem(12)?.itemMeta?.displayName == "§eTarget" || menu?.getItem(12)?.itemMeta?.displayName == "§eIndex" || menu?.getItem(10)?.itemMeta?.displayName == "§eString") {
+                    upperGui!!.addIngredient('s', GuiItems.LIMIT_REACHED.createItemBuilder(), 0)
+                    upperGui!!.addIngredient('f', GuiItems.LIMIT_REACHED_EMPTY.createItemBuilder(), 0)
+                } else {
+                    upperGui!!.addIngredient('s', GuiItems.ADD_EXPRESSION.createItemBuilder(), 50)
+                    upperGui!!.addIngredient('f', GuiItems.ADD_EXPRESSION_EMPTY.createItemBuilder(), 50)
+                }
+                if (menu?.getItem(11)?.itemMeta?.displayName == "§eString") {
+                    menu?.getItem(11)?.lore?.let { lore ->
+                        if (lore.any { stripColor(it) == "Middle Click to toggle expression!" }) {
+                        } else {
+                            upperGui!!.addIngredient('s', GuiItems.LIMIT_REACHED.createItemBuilder(), 0)
+                            upperGui!!.addIngredient('f', GuiItems.LIMIT_REACHED_EMPTY.createItemBuilder(), 0)
+                        }
                     }
                 }
+            } else {
+                upperGui!!.addIngredient('s', empty_slot)
+                upperGui!!.addIngredient('f', empty_slot)
             }
-        } else {
-            upperGui!!.addIngredient('s', empty_slot)
-            upperGui!!.addIngredient('f', empty_slot)
         }
         if (menu?.getItem(31)?.itemMeta?.displayName == "§cGo Back") {
             upperGui!!.addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)

@@ -16,6 +16,9 @@ class OpenMenuListener : Listener {
     fun onOpenActionMenu(event: OpenMenuEvent) {
         //Window registration
         val window: AlternativeWindow = when (event.menu.javaClass.simpleName) {
+            "GroupsMenu" -> GroupsWindow()
+            "GroupEditMenu" -> EditGroupWindow()
+            "PermissionsMenu" -> EditPermissionsWindow()
             "ActionsMenu" -> ActionsWindow()
             "AddActionMenu" -> AddActionsWindow()
             "ActionClipboardMenu" -> ActionClipboardWindow()

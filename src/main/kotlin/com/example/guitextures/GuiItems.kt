@@ -17,6 +17,20 @@ import xyz.xenondevs.nova.world.item.behavior.ItemBehaviorHolder
 
 @Init(stage = InitStage.PRE_PACK)
 object GuiItems : ItemRegistry by ExampleAddon.registry {
+    //Groups GUI Items
+    val CREATE_GROUP = emptyItem("create_group", "§bCreate Group")
+
+    //Edit Group GUI Items
+    val RENAME_GROUP = emptyItem("rename_group", "§eRename Group")
+    val DELETE_GROUP = emptyItem("delete_group", "§cDelete Group")
+    val DEFAULT_GROUP = emptyItem("default_group", "§bDefault Group")
+    val GROUP_DISPLAY = emptyItem("group_display", "§bChange Display Name")
+    val GROUP_PREFIX = emptyItem("group_prefix", "§dChange Prefix")
+    val GROUP_SUFFIX = emptyItem("group_suffix", "§dChange Suffix")
+    val GROUP_COLOR = emptyItem("group_color", "§fChange Color")
+    val GROUP_PRIORITY = emptyItem("group_priority", "§aChange Priority")
+    val GROUP_PERMISSIONS = emptyItem("group_permissions", "§aEdit Permissions")
+
     //Conditional GUI Items
     val CONDITIONS = emptyItem("conditions", "§aConditions")
     val NOT_GREEN = guiItem("conditionals/not_green", "§aNot")
