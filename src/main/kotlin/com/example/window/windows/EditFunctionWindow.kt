@@ -3,6 +3,7 @@ package com.example.window.windows
 import com.example.guitextures.GuiItems
 import com.example.guitextures.GuiTextures
 import com.example.window.AlternativeWindow
+import org.bukkit.ChatColor.stripColor
 import xyz.xenondevs.invui.gui.Gui
 import xyz.xenondevs.invui.item.Item
 import xyz.xenondevs.invui.window.Window
@@ -25,8 +26,8 @@ class EditFunctionWindow : AlternativeWindow() {
                 arrayListOf(
                     ". . . . . . . . .",
                     ". j j j j j j j .",
-                    ". . d . i . t . .",
-                    ". . . j j j . . .",
+                    ". . d . . . i . .",
+                    ". . . t f f . . .",
                     ". . . . . . . . .",
                     ". r r r . a a a .",
                 )
@@ -44,9 +45,27 @@ class EditFunctionWindow : AlternativeWindow() {
             .addIngredient('i', GuiItems.EDIT_FUNCTION_ICON.createItemBuilder()
                 .addLoreLines(menu?.getItem(14)?.lore() ?: emptyList()), 14
             )
-            .addIngredient('t', GuiItems.TOGGLE_GLOBAL.createItemBuilder()
-                .addLoreLines(menu?.getItem(16)?.lore() ?: emptyList()), 16
-            )
+        menu?.getItem(16)?.lore?.let { lore ->
+            if (lore.any { stripColor(it) == "Current: Disabled" }) {
+                upperGui!!.addIngredient(
+                    't', GuiItems.LOCAL.createItemBuilder()
+                        .addLoreLines(menu?.getItem(16)?.lore() ?: emptyList()), 16
+                )
+                upperGui!!.addIngredient(
+                    'f', GuiItems.LOCAL_EMPTY.createItemBuilder()
+                        .addLoreLines(menu?.getItem(16)?.lore() ?: emptyList()), 16
+                )
+            } else {
+                upperGui!!.addIngredient(
+                    't', GuiItems.GLOBAL.createItemBuilder()
+                        .addLoreLines(menu?.getItem(16)?.lore() ?: emptyList()), 16
+                )
+                upperGui!!.addIngredient(
+                    'f', GuiItems.GLOBAL_EMPTY.createItemBuilder()
+                        .addLoreLines(menu?.getItem(16)?.lore() ?: emptyList()), 16
+                )
+            }
+        }
 
         return upperGui!!
     }

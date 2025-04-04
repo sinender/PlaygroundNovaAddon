@@ -61,14 +61,33 @@ class PlaygroundWindow : AlternativeWindow() {
             .addIngredient('l', GuiItems.PLAYER_LISTING.createItemBuilder(), 8)
         menu?.getItem(0)?.lore?.let { lore ->
             if (lore.any { stripColor(it) == "Current Privacy: PUBLIC" }) {
-                lowerGui!!.addIngredient('u', GuiItems.VISIBILITY_PUBLIC.createItemBuilder(), 0)
-                lowerGui!!.addIngredient('f', GuiItems.VISIBILITY_PUBLIC_EMPTY.createItemBuilder(), 0)
+                lowerGui!!.addIngredient('u', GuiItems.VISIBILITY_PUBLIC.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
+                lowerGui!!.addIngredient('f', GuiItems.VISIBILITY_PUBLIC_EMPTY.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
             } else if (lore.any { stripColor(it) == "Current Privacy: PRIVATE" }) {
-                lowerGui!!.addIngredient('u', GuiItems.VISIBILITY_PRIVATE.createItemBuilder(), 0)
-                lowerGui!!.addIngredient('f', GuiItems.VISIBILITY_PRIVATE_EMPTY.createItemBuilder(), 0)
+                lowerGui!!.addIngredient('u', GuiItems.VISIBILITY_PRIVATE.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
+                lowerGui!!.addIngredient('f', GuiItems.VISIBILITY_PRIVATE_EMPTY.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
+            } else if (lore.any { stripColor(it) == "Current Privacy: WHITELISTED" }) {
+                lowerGui!!.addIngredient('u', GuiItems.VISIBILITY_WHITELISTED.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
+                lowerGui!!.addIngredient('f', GuiItems.VISIBILITY_WHITELISTED_EMPTY.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
             } else {
-                lowerGui!!.addIngredient('u', GuiItems.VISIBILITY_PUBLIC_EMPTY.createItemBuilder(), 0)
-                lowerGui!!.addIngredient('f', GuiItems.VISIBILITY_PUBLIC_EMPTY.createItemBuilder(), 0)
+                lowerGui!!.addIngredient('u', GuiItems.VISIBILITY_PUBLIC_EMPTY.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
+                lowerGui!!.addIngredient('f', GuiItems.VISIBILITY_PUBLIC_EMPTY.createItemBuilder()
+                    .addLoreLines(menu?.getItem(0)?.lore() ?: emptyList()), 0
+                )
             }
         }
         return lowerGui!!
