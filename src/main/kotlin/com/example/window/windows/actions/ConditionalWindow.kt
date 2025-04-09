@@ -14,8 +14,8 @@ class ConditionalWindow : AlternativeActionsWindow("Conditional Action") {
             .setStructure(
                 arrayListOf(
                     ". . . . . . . . .",
-                    ". . . . . . . . .",
                     ". c i . b . s . .",
+                    ". . . . . . . . .",
                     ". . . . . . . . ."
                 )
             )
@@ -45,7 +45,8 @@ class ConditionalWindow : AlternativeActionsWindow("Conditional Action") {
                     ". c c c c . n & .",
                     ". . . . . . . . .",
                     ". . i i i i i . .",
-                    ". . e e e e e . ."
+                    ". . e e e e e . .",
+                    ". . . . . . . . ."
                 )
             )
             .addIngredient('c', GuiItems.CONDITIONS.createItemBuilder()
