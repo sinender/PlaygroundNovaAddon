@@ -31,6 +31,21 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     val GROUP_PRIORITY = emptyItem("group_priority", "§aChange Priority")
     val GROUP_PERMISSIONS = emptyItem("group_permissions", "§aEdit Permissions")
 
+    //Edit Player GUI Items
+    val KICK_PLAYER = guiItem("edit.player/kick", "§cKick Player", false, 3)
+    val KICK_PLAYER_EMPTY = emptyItem("kick_player","§cKick Player")
+    val MUTE_PLAYER = guiItem("edit.player/mute", "§cMute Player", false, 3)
+    val MUTE_PLAYER_EMPTY = emptyItem("mute_player","§cMute Player")
+    val BAN_PLAYER = guiItem("edit.player/ban", "§cBan Player", false, 3)
+    val BAN_PLAYER_EMPTY = emptyItem("ban_player","§cBan Player")
+    val CYCLE_TEAM = guiItem("edit.player/team", "§eCycle Team", false, 3)
+    val CYCLE_TEAM_EMPTY = emptyItem("cycle_team","§eCycle Team")
+    val CYCLE_GROUP = guiItem("edit.player/group", "§eCycle Group", false, 3)
+    val CYCLE_GROUP_EMPTY = emptyItem("cycle_group","§eCycle Group")
+    val CYCLE_GAMEMODE = guiItem("edit.player/gamemode", "§eCycle Gamemode", false, 3)
+    val CYCLE_GAMEMODE_EMPTY = emptyItem("cycle_gamemode","§eCycle Gamemode")
+    val RESET_PLAYER_DATA = emptyItem("reset_player_data","§cReset Player Data")
+
     //Conditional GUI Items
     val CONDITIONS = emptyItem("conditions", "§aConditions")
     val NOT_GREEN = guiItem("conditionals/not_green", "§aNot")

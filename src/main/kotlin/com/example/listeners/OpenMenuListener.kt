@@ -20,6 +20,7 @@ class OpenMenuListener : Listener {
             "GroupEditMenu" -> EditGroupWindow()
             "PermissionsMenu" -> EditPermissionsWindow()
             "PlayerListingMenu" -> PlayerListingWindow()
+            "EditPlayerMenu" -> EditPlayerWindow()
             "ActionsMenu" -> ActionsWindow()
             "AddActionMenu" -> AddActionsWindow()
             "ActionClipboardMenu" -> ActionClipboardWindow()
