@@ -65,6 +65,12 @@ class OpenMenuListener : Listener {
         window.createWindow().open(event.player)
 
         event.isCancelled = true
+
+        val windowId = event.menu.javaClass.simpleName
+        if (windowId == "LayoutsMenu") {
+            event.isShowItems = true
+        }
+
         windows[event.player.uniqueId] = window
     }
 
