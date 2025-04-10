@@ -235,7 +235,7 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         path("gui/player_listing_window")
     }
     val EDIT_PLAYER_WINDOW = guiTexture("edit_player_window") {
-        alignment(-26,-21)
+        alignment(-26, -56)
         path("gui/edit_player_window")
     }
 

@@ -10,7 +10,7 @@ import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
 class EditTeamWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
         window = Window.split()
             .setTitle(GuiTextures.EDIT_TEAM_WINDOW.component)
             .setUpperGui(createUpperGui())

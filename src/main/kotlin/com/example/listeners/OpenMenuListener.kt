@@ -20,7 +20,7 @@ class OpenMenuListener : Listener {
             "GroupEditMenu" -> EditGroupWindow()
             "PermissionsMenu" -> EditPermissionsWindow()
             "PlayerListingMenu" -> PlayerListingWindow()
-            "EditPlayerMenu" -> EditPlayerWindow()
+            "EditPlayerMenu" -> EditPlayerWindow(event.menu.title)
             "ActionsMenu" -> ActionsWindow()
             "AddActionMenu" -> AddActionsWindow()
             "ActionClipboardMenu" -> ActionClipboardWindow()
@@ -67,7 +67,7 @@ class OpenMenuListener : Listener {
         event.isCancelled = true
 
         val windowId = event.menu.javaClass.simpleName
-        if (windowId == "LayoutsMenu") {
+        if (windowId == "LayoutEditMenu") {
             event.isShowItems = true
         }
 

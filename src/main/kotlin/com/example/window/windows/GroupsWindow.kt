@@ -9,7 +9,7 @@ import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
 class GroupsWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
         window = Window.split()
             .setTitle(GuiTextures.GROUPS_WINDOW.component)
             .setUpperGui(createUpperGui())

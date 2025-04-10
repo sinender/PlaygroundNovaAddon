@@ -10,7 +10,7 @@ import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
 class EditGroupWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
         if (menu?.getItem(48)?.isEmpty != false && (menu?.getItem(50)?.isEmpty != false)) {
             window = Window.split()
                 .setTitle(GuiTextures.EDIT_GROUP_AB_WINDOW.component)

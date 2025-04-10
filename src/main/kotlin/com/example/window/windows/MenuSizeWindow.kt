@@ -10,7 +10,7 @@ import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
 class MenuSizeWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
         if (menu?.getItem(10)?.itemMeta?.hasEnchants() == true) {
             window = Window.split()
                 .setTitle(GuiTextures.MENU_1.component)

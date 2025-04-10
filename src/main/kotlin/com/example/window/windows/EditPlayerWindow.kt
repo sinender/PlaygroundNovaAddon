@@ -3,17 +3,44 @@ package com.example.window.windows
 import com.example.guitextures.GuiItems
 import com.example.guitextures.GuiTextures
 import com.example.window.AlternativeWindow
+import net.kyori.adventure.key.Key
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.format.TextColor
 import org.bukkit.ChatColor.stripColor
 import org.bukkit.Material
 import xyz.xenondevs.invui.gui.Gui
 import xyz.xenondevs.invui.item.Item
 import xyz.xenondevs.invui.window.Window
+import xyz.xenondevs.nova.resources.CharSizes
+import xyz.xenondevs.nova.util.component.adventure.moveTo
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
-class EditPlayerWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+class EditPlayerWindow(val name: String) : AlternativeWindow() {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
+
+        val playerName = stripColor(name.substringAfterLast(' ')) ?: "No Name"
+        //left x: 38, right x: 38+88
+        //find the amount of space pixels to make the name in the center
+        var length = CharSizes.calculateStringWidth(Key.key("minecraft:default"), playerName)
+        var space = 0
+        if (length > 88) {
+            length = 88F
+            space = 0
+        } else {
+            space = ((88 - length) / 2).toInt()
+        }
         window = Window.split()
-            .setTitle(GuiTextures.EDIT_PLAYER_WINDOW.component)
+            .setTitle(
+                GuiTextures.EDIT_PLAYER_WINDOW.getTitle(
+                    Component.text()
+                        .moveTo(space + 38)
+                        .append(
+                            Component.text(playerName)
+                                .color(TextColor.color(0xE5E5E5))
+                        )
+                        .build()
+                )
+            )
             .setUpperGui(createUpperGui())
             .setLowerGui(createLowerGui())
 
@@ -24,8 +51,6 @@ class EditPlayerWindow : AlternativeWindow() {
         upperGui = Gui.normal()
             .setStructure(
                 arrayListOf(
-                    ". . . . . . . . .",
-                    "j j j j j j j j j",
                     "j j j j j j j j j",
                     "j k f f j t r r j",
                     ". m l l . g h h .",
@@ -135,8 +160,9 @@ class EditPlayerWindow : AlternativeWindow() {
                 )
             )
             .addIngredient('b', GuiItems.BACK.createItemBuilder(), 31)
-            .addIngredient('d', GuiItems.RESET_PLAYER_DATA.createItemBuilder()
-                .addLoreLines(menu?.getItem(35)?.lore() ?: emptyList()), 35
+            .addIngredient(
+                'd', GuiItems.RESET_PLAYER_DATA.createItemBuilder()
+                    .addLoreLines(menu?.getItem(35)?.lore() ?: emptyList()), 35
             )
         return lowerGui!!
     }

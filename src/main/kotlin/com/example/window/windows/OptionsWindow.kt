@@ -9,7 +9,7 @@ import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
 class OptionsWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
         if (menu?.getItem(13)?.itemMeta?.displayName == "§eInvokers Location") {
             window = Window.split()
                 .setTitle(GuiTextures.TELEPORT_OPTIONS.component)
