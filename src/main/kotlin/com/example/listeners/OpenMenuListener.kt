@@ -53,7 +53,10 @@ class OpenMenuListener : Listener {
             "EditHouseMenu" -> EditCreationWindow()
             "ConfirmMenu" -> ConfirmationWindow()
             "EditItemMainMenu" -> EditItemWindow()
-            "EnumMenu" -> SelectItemWindow()
+            "EnumMenu" -> SelectItemWindow() //Not working??
+            "CustomItemBrowserMenu" -> CustomItemsWindow()
+            "IndivisualHeadsMenu" -> IHeadsWindow()
+            "HeadsMenu" -> HeadsWindow()
             else -> return
         }
 

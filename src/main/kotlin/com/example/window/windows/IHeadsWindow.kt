@@ -3,17 +3,15 @@ package com.example.window.windows
 import com.example.guitextures.GuiItems
 import com.example.guitextures.GuiTextures
 import com.example.window.AlternativeWindow
-import org.bukkit.ChatColor.stripColor
-import org.bukkit.Material
 import xyz.xenondevs.invui.gui.Gui
 import xyz.xenondevs.invui.item.Item
 import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
-class SelectItemWindow : AlternativeWindow() {
+class IHeadsWindow : AlternativeWindow() {
     override fun createWindow(): Window.Builder.Normal.Split {
         window = Window.split()
-            .setTitle(GuiTextures.SELECT_ITEM_WINDOW.component)
+            .setTitle(GuiTextures.I_HEADS_WINDOW.component)
             .setUpperGui(createUpperGui())
             .setLowerGui(createLowerGui())
 
@@ -55,7 +53,7 @@ class SelectItemWindow : AlternativeWindow() {
                     .addLoreLines(menu?.getItem(48)?.lore() ?: emptyList()), 48
             )
         val allowedSlots =
-            intArrayOf(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35)
+            intArrayOf(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44)
         upperGui!!.addModifier {
             for (slot in allowedSlots) {
                 if (menu?.getItem(slot)?.isEmpty == false) {

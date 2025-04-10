@@ -57,6 +57,24 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         path("gui/select_item_window")
     }
 
+    //Custom Items
+    val CUSTOM_ITEMS_WINDOW = guiTexture("custom_items_window") {
+        alignment(-26,-21)
+        path("gui/custom_items_window")
+    }
+
+    //Heads
+    val HEADS_WINDOW = guiTexture("heads_window") {
+        alignment(-26,-21)
+        path("gui/heads_window")
+    }
+
+    //Indivisual Heads
+    val I_HEADS_WINDOW = guiTexture("i_heads_window") {
+        alignment(-26,-21)
+        path("gui/i_heads_window")
+    }
+
     //Generic
     val ACTIONS_WINDOW = guiTexture("actions_window") {
         alignment(-26,-21)
