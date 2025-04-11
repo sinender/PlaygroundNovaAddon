@@ -75,6 +75,16 @@ object GuiTextures : GuiTextureRegistry by ExampleAddon.registry {
         path("gui/i_heads_window")
     }
 
+    //Time Selector
+    val TIME_SELECTOR_E_WINDOW = guiTexture("time_selector_enabled_window") {
+        alignment(-26,-21)
+        path("gui/time.selector/time_selector_disabled_window")
+    }
+    val TIME_SELECTOR_D_WINDOW = guiTexture("time_selector_disabled_window") {
+        alignment(-26,-21)
+        path("gui/time.selector/time_selector_disabled_window")
+    }
+
     //Generic
     val ACTIONS_WINDOW = guiTexture("actions_window") {
         alignment(-26,-21)

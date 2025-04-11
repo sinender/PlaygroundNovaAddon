@@ -195,6 +195,13 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
     //Systems > NPCs GUI Items
     val CREATE_NPC = guiItem("npcs/create_npc", "§aCreate NPC")
 
+    //Time Selector GUI Items
+    val SET_TIME = emptyItem("set_time", "§eSet Time")
+    val TOGGLE_DAYLIGHT_CYCLE_E = emptyItem("toggle_daylight_cycle_e", "§aToggle Daylight Cycle")
+    val TOGGLE_DAYLIGHT_CYCLE_D = emptyItem("toggle_daylight_cycle_d", "§cToggle Daylight Cycle")
+    val SELECTED_TIME = guiItem("times/selected_time", "§aThe current time")
+    val UNSELECTED_TIME = emptyItem("unselected_time", "§fSelect this time")
+
     //Playground Menu GUI Items
     val PLAYER_LISTING = emptyItem("player_listing", "§ePlayer Listing")
     val BUILD_MODE = emptyItem("build_mode", "§aMode: §eBuild Mode")
@@ -252,7 +259,7 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
         var display = when (slots) {
             2 -> Model.Display(
                 scale = Vector3d(2.0, 1.0, 1.0),
-                translation = Vector3d(8.0, 0.0, 0.0)
+                translation = Vector3d(10.0, 0.0, 0.0)
             )
             3 -> Model.Display(
                 scale = Vector3d(3.3, 1.0, 1.0),
@@ -261,6 +268,10 @@ object GuiItems : ItemRegistry by ExampleAddon.registry {
             4 -> Model.Display(
                 scale = Vector3d(1.0,1.0,1.0),
                 translation = Vector3d(0.0,36.0,0.0)
+            )
+            5 -> Model.Display(
+                scale = Vector3d(2.0,1.0,1.0),
+                translation = Vector3d(19.0,0.0,0.0)
             )
             else -> Model.Display(
                 scale = Vector3d(1.0, 1.0, 1.0),

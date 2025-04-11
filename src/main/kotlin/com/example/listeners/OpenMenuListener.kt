@@ -57,6 +57,7 @@ class OpenMenuListener : Listener {
             "CustomItemBrowserMenu" -> CustomItemsWindow()
             "IndivisualHeadsMenu" -> IHeadsWindow()
             "HeadsMenu" -> HeadsWindow()
+            "TimeSelectorMenu" -> TimeSelectorWindow()
             else -> return
         }
 
