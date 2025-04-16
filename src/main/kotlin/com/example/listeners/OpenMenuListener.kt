@@ -16,8 +16,14 @@ class OpenMenuListener : Listener {
     fun onOpenActionMenu(event: OpenMenuEvent) {
         //Window registration
         val window: AlternativeWindow = when (event.menu.javaClass.simpleName) {
+            "GroupsMenu" -> GroupsWindow()
+            "GroupEditMenu" -> EditGroupWindow()
+            "PermissionsMenu" -> EditPermissionsWindow()
+            "PlayerListingMenu" -> PlayerListingWindow()
+            "EditPlayerMenu" -> EditPlayerWindow(event.menu.title)
             "ActionsMenu" -> ActionsWindow()
             "AddActionMenu" -> AddActionsWindow()
+            "ActionClipboardMenu" -> ActionClipboardWindow()
             "AddConditionMenu" -> AddActionsWindow()
             "FunctionsMenu" -> FunctionsWindow()
             "FunctionSettingsMenu" -> EditFunctionWindow()
@@ -26,12 +32,19 @@ class OpenMenuListener : Listener {
             "RegionEditMenu" -> EditRegionWindow()
             "EventActionsMenu" -> EventActionsWindow()
             "ScoreboardMenu" -> ScoreboardWindow()
+            "CommandArgumentsEditMenu" -> EditArgumentsWindow()
             "CommandsMenu" -> CommandsWindow()
             "CommandEditMenu" -> EditCommandWindow()
             "LayoutsMenu" -> LayoutsWindow()
+            "LayoutEditMenu" -> EditLayoutWindow()
+            "ChangeArmorMenu" -> ChangeArmorWindow()
             "TeamsMenu" -> TeamsWindow()
+            "TeamEditMenu" -> EditTeamWindow()
             "CustomMenusMenu" -> CustomMenusWindow()
+            "CustomMenuEditMenu" -> EditMenuWindow()
+            "ChangeMenuSizeMenu" -> MenuSizeWindow()
             "NPCsMenu" -> NPCsWindow()
+            "NPCMenu" -> EditNpcWindow()
             "SystemsMenu" -> SystemsWindow()
             "ActionEditMenu" -> ChatActionSettingsWindow()
             "ActionEnumMenu" -> OptionsWindow()
@@ -40,7 +53,11 @@ class OpenMenuListener : Listener {
             "EditHouseMenu" -> EditCreationWindow()
             "ConfirmMenu" -> ConfirmationWindow()
             "EditItemMainMenu" -> EditItemWindow()
-            "EnumMenu" -> SelectItemWindow()
+            "EnumMenu" -> SelectItemWindow() //Not working??
+            "CustomItemBrowserMenu" -> CustomItemsWindow()
+            "IndivisualHeadsMenu" -> IHeadsWindow()
+            "HeadsMenu" -> HeadsWindow()
+            "TimeSelectorMenu" -> TimeSelectorWindow()
             else -> return
         }
 
@@ -49,6 +66,12 @@ class OpenMenuListener : Listener {
         window.createWindow().open(event.player)
 
         event.isCancelled = true
+
+        val windowId = event.menu.javaClass.simpleName
+        if (windowId == "LayoutEditMenu") {
+            event.isShowItems = true
+        }
+
         windows[event.player.uniqueId] = window
     }
 

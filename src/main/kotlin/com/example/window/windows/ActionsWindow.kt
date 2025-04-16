@@ -10,7 +10,7 @@ import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
 class ActionsWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
         window = Window.split()
             .setTitle(GuiTextures.ACTIONS_WINDOW.component)
             .setUpperGui(createUpperGui())
@@ -29,7 +29,7 @@ class ActionsWindow : AlternativeWindow() {
                     ". . . n f f . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    "l j a s s s a j r",
+                    "l j a s s s a j r"
                 )
             )
             .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
@@ -89,7 +89,7 @@ class ActionsWindow : AlternativeWindow() {
                 )
             )
             .addIngredient('i', GuiItems.IMPORT_ACTION.createItemBuilder(), 48)
-            .addIngredient('a', GuiItems.IMPORT_AUTO.createItemBuilder(), 47)
+            .addIngredient('a', GuiItems.IMPORT_AUTO.createItemBuilder(), 46)
             .addIngredient('b', GuiItems.BACK.createItemBuilder(), 49)
             .addIngredient(
                 'e', GuiItems.EXPORT_ACTION.createItemBuilder()
@@ -101,7 +101,7 @@ class ActionsWindow : AlternativeWindow() {
                             "",
                             "<yellow>Click to export!"
                         )
-                    ), 46
+                    ), 47
             )
 
         if (menu?.getItem(52)?.isEmpty == false) {

@@ -9,7 +9,7 @@ import xyz.xenondevs.invui.window.Window
 import xyz.xenondevs.nova.world.item.DefaultGuiItems
 
 class AddActionsWindow : AlternativeWindow() {
-    override fun createWindow(): Window.Builder.Normal.Split {
+    override fun createWindow(): Window.Builder.Normal<*, *> {
         window = Window.split()
             .setTitle(GuiTextures.ADD_ACTIONS_WINDOW.component)
             .setUpperGui(createUpperGui())
@@ -29,9 +29,10 @@ class AddActionsWindow : AlternativeWindow() {
                     ". . . n f f . . .",
                     ". . . . . . . . .",
                     ". . . . . . . . .",
-                    "l . . s s s . . r",
+                    "l j j s s s j j r",
                 )
             )
+            .addIngredient('j', GuiItems.NOT_CLICKABLE.createItemBuilder(), 0)
             .addIngredient(
                 'l', if (menu?.getItem(45)?.isEmpty != false) {
                     empty_slot

@@ -20,7 +20,7 @@ repositories {
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
     implementation(libs.nova)
-    implementation("com.al3x:Playground:1.0.2")
+    implementation("com.al3x:Playground:1.0.6")
 }
 
 addon {

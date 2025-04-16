@@ -11,14 +11,14 @@ import xyz.xenondevs.invui.window.Window
 import java.util.LinkedHashMap
 
 abstract class AlternativeWindow {
-    var window: Window.Builder.Normal.Split? = null
+    var window: Window.Builder.Normal<*, *>? = null
     var menu: Menu? = null
     val ingredients: HashMap<Gui.Builder<*, *>, ArrayList<Ingredient>> = HashMap()
     val structures: HashMap<Gui.Builder<*, *>, ArrayList<String>> = HashMap()
     var upperGui: Gui.Builder<*, *>? = null
     var lowerGui: Gui.Builder<*, *>? = null
 
-    abstract fun createWindow(): Window.Builder.Normal.Split
+    abstract fun createWindow(): Window.Builder.Normal<*, *>
     abstract fun createUpperGui(): Gui.Builder<*, *>
     abstract fun createLowerGui(): Gui.Builder<*, *>
 
